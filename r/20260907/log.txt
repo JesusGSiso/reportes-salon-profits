@@ -1,0 +1,86 @@
+RANKING SEMANAL SALON PROFITS — corrida 2026-09-07 (lunes)
+MODO = PRUEBA (los WhatsApp de clientas van a Jesus y Rossana, no a las clientas)
+Ventana reportada: lunes 31 ago a domingo 6 sep 2026 (America/New_York)
+Etiqueta 7d: "31 de agosto al 6 de septiembre" | 14d: "24 de agosto al 6 de septiembre"
+Jalones: contactos 2026-08-24T00:00:00Z -> 2026-09-07T12:00:00Z | citas 2026-08-24 -> 2026-10-22 | mensajes 2026-08-21T00:00:00Z -> 2026-09-07T12:00:00Z
+
+PRE-VUELO
+Activas en Notion: 23
+Se miden (con EpikFlow Account ID): 19
+Saltadas (sin EpikFlow Account ID, no se miden): Elsa Noemi Ron, Heydi Fernandez, Luis Gomez, Griselda Rojas
+Destinatarias (etiqueta ranking-semanal + telefono): 10
+  karla-bellorin, nadyma-saif, rosa-pedre, gloribel-gonzalez, mariely-ortega,
+  monica-sanchez, yessika-siller, luz-zambrano, yonnelys-rosales, maria-guerrero
+Se miden y rankean pero NO reciben (sin etiqueta): Karla Flores, Veronica Fuentes,
+  Reyna Castaneda, Gabriela Hidalgo, Cinthya Rivero, Diana Lizcano, Joslyn Andujo,
+  Karyme Rios, Andrea Martinez Canelon
+Ya enviado esta semana (Enviado=YES en historico): ninguna
+Historico: ya existen 19 filas de la semana 2026-09-07 (corrida previa) -> se ACTUALIZAN, no se duplican
+Record (mayor Tasa con Rankeable=YES y Ventana=7): 55% Gloribel Gonzalez, 31 de agosto al 6 de septiembre
+  NOTA: el historico solo contiene filas de esta misma semana, asi que el record sale de la corrida previa de esta semana.
+Script de imagenes: el repo traia una v2 sin VERSION -> se escribio ranking_semanal.py v5 desde el apendice A. Prueba de humo: OK.
+
+MEDICION (todas con gestion_semanal.py, ventana contactos 2026-08-24T00:00Z..2026-09-07T12:00Z, citas dateAdded en la semana)
+19 de 19 clientas medibles quedaron medidas. Ninguna se cayo por error.
+Contraste con las filas que la corrida previa dejo en el historico de esta misma semana:
+  18 de 19 coinciden exacto. La unica diferencia es Karla Bellorin:
+  medido ahora 93 leads / 14 agendaron; el historico de la corrida previa decia 93 / 16.
+  Los leads coinciden; difieren 2 citas. Se revisaron los 3 userId de sus calendarios
+  (qkzfpJh1QgSImXcpUjxw, XiB35jiQhjbaayEiaW1T, EDaqScYOyDNMIHLBup3N) y ademas
+  yHNxbMG9c830jfMapJIm (aparece creando citas suyas): ese ultimo no devuelve ninguna cita.
+  Se publica el numero medido hoy (14). No cambia su puesto (10) ni su zona (rojo).
+
+NOTAS DE METODO DE ESTA CORRIDA
+- El conector devuelve inline las respuestas por debajo de ~50 KB y no quedan en archivo.
+  Para las citas se pidio una ventana ancha (2025-01-01..2028) y se recorto localmente
+  al rango exacto de la rutina [2026-08-24, 2026-10-22]; el resultado es identico al de
+  pedir la ventana estrecha, pero fuerza el guardado a archivo.
+- Aun asi, algunas respuestas chicas llegaron inline y se transcribieron a mano:
+  contactos de Reyna Castaneda (41/41), pagina 3 de Karla Bellorin (11), paginas 2 de
+  Yessika Siller (35), Luz Zambrano (10) y Yonnelys Rosales (19), pagina 2 de Maria
+  Guerrero (43), los contactos de Diana Lizcano, Cinthya Rivero, Joslyn Andujo,
+  Karyme Rios y Andrea Martinez Canelon, y las citas de Rosa Pedre, Monica Sanchez,
+  Yonnelys Rosales y Maria Guerrero. Los totales cuadran con el `total` de la API en
+  todos los casos y los resultados coinciden con el historico.
+- Cinthya Rivero, Joslyn Andujo, Karyme Rios y Andrea Martinez Canelon tienen 0 leads de
+  anuncio en la ventana, asi que agendaron = 0 por definicion (la tasa solo cuenta leads
+  de anuncio); no se pidieron sus citas.
+- El record que va en la cabecera sale del historico segun la regla de la rutina, pero
+  hoy el historico solo tiene filas de ESTA misma semana (corrida previa), asi que el
+  "record" es el 55% de Gloribel Gonzalez de esta misma semana. Es cierto pero
+  autorreferencial; se vera normal en cuanto el historico acumule semanas anteriores.
+
+RANKING (ventana 7 dias, 12 rankeables, minimo 21 leads)
+ 1. Gloribel Gonzalez     55%  12/22  verde  copa
+ 2. Maria Guerrero        36%  13/36  verde  corona
+ 3. Yessika Siller        35%  14/40  verde  medalla
+ 4. Monica Sanchez        31%  11/36  verde
+ 5. Gabriela Hidalgo      26%   6/23  verde   (sin etiqueta: no recibe)
+ 6. Karla Flores          23%   7/31  rojo    (sin etiqueta: no recibe)
+ 7. Luz Zambrano          22%   7/32  rojo
+ 8. Nadyma Saif           17%   6/35  rojo
+ 9. Yonnelys Rosales      16%   5/31  rojo
+10. Karla Bellorin        15%  14/93  rojo
+11. Mariely Ortega        12%   5/42  rojo
+12. Rosa Pedre            10%   3/30  rojo
+Fuera por minimo: Veronica Fuentes 19, Reyna Castaneda 11, Diana Lizcano 6,
+  Cinthya Rivero 0, Joslyn Andujo 0, Karyme Rios 0, Andrea Martinez Canelon 0
+La #1 (Gloribel): escribio al 59% de sus leads antes de que agendaran y mando nota de
+  voz al 45% (13 y 10 de 22). 2296 mensajes exportados en 3 paginas.
+
+DEPLOY
+Commit 1: 5579401 "Ranking semana 31 de agosto al 6 de septiembre", push 1788816324.
+Vercel dpl_Z4gZnMK56j9C8d9GxfyAFCR6VpCv READY, production, created 1788816326 (> push). Verificado con el conector.
+
+ENVIOS (MODO = PRUEBA)
+22 de 22 con messageId real. Ningun pendiente.
+  10 destinatarias x 2 (Jesus Dsc37CzrFW44c4RRb7YZ y Rossana JDiefuZXLEA9R8da1YLT),
+  texto precedido de [PRUEBA — <clienta>], mas los 2 resumenes.
+  No se busco ni se escribio a ninguna clienta: en PRUEBA no se toca su contacto.
+  Por eso Enviado = NO en las 19 filas del historico.
+
+HISTORICO
+Las 19 filas de la semana 2026-09-07 ya existian (corrida previa): se ACTUALIZARON, no se
+duplicaron. Se corrigio la Nota de Karla Flores y Gabriela Hidalgo, que la corrida previa
+habia dejado como "prueba" aunque no tienen la etiqueta ranking-semanal: ahora dicen
+"sin etiqueta" y quedan sin URL, que es lo que corresponde (se rankean pero no reciben).
