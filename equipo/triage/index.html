@@ -1,78 +1,46 @@
-<!doctype html><html lang="es"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Triage · 24–30 ago</title><style>*{box-sizing:border-box;margin:0;padding:0}
-body{background:#F7F6F2;color:#1F2421;font:15px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;padding:0 0 60px}
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Triage · 31 ago–6 sep</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F7F6F2;color:#1F2421;font:15px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;padding:0 0 56px}
 .w{max-width:1080px;margin:0 auto;padding:0 18px}
-header{background:#2F6F68;color:#fff;padding:26px 0 22px;margin-bottom:22px}
-.eb{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#BFD6D1}
-h1{font-family:Georgia,serif;font-size:28px;font-weight:600;margin:6px 0 0}
-h2{font-family:Georgia,serif;font-size:19px;color:#24534E;margin:32px 0 10px;font-weight:600}
+header{background:#24534E;color:#fff;padding:26px 0 22px;margin-bottom:22px}
+h1{font-family:Georgia,serif;font-size:26px;font-weight:600}
+.eb{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#BFD6D1;margin-bottom:6px}
+h2{font-family:Georgia,serif;font-size:19px;color:#24534E;margin:30px 0 10px;font-weight:600}
 .cart{background:#fff;border:1px solid #E6E2D9;border-radius:12px;padding:18px 20px}
 .cart .big{font-family:Georgia,serif;font-size:30px;font-weight:700;color:#2F6F68;line-height:1.2}
-.cart .sub{color:#6B6B63;font-size:13.5px;margin-top:6px}
-table{width:100%;border-collapse:collapse;table-layout:fixed;background:#fff;border:1px solid #E6E2D9;border-radius:12px;overflow:hidden}
-th{background:#EFEDE7;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#4A5350;text-align:left;padding:10px 12px;font-weight:700}
-td{padding:12px;border-top:1px solid #EFEDE7;font-size:13.5px;vertical-align:top;word-break:break-word}
-td i{display:block;font-style:normal;color:#6B6B63;font-size:11.5px;margin-top:2px}
-td.t b{font-size:20px;font-family:Georgia,serif;color:#C0522F}
-a{color:#2F6F68;font-weight:600;text-decoration:none}a:hover{text-decoration:underline}
-col.c1{width:17%}col.c2{width:10%}col.c3{width:10%}col.c4{width:13%}col.c5{width:22%}col.c6{width:14%}col.c7{width:14%}
-.nota{background:#fff;border:1px solid #E6E2D9;border-left:3px solid #B0741C;border-radius:10px;padding:14px 16px;margin-bottom:10px;font-size:14px}
-.nota b{color:#8A5A14}
-.ok{border-left-color:#3F7D4A}.ok b{color:#2F6136}
-pre{background:#1F2421;color:#D8D5CC;padding:14px;border-radius:10px;overflow-x:auto;font-size:11.5px;line-height:1.6}
-footer{margin-top:34px;color:#6B6B63;font-size:12.5px}
+.cart .d{font-size:14px;color:#1F2421;margin-top:4px}
+.cart .a{font-size:13px;color:#6B6B63;margin-top:2px}
+table{width:100%;table-layout:fixed;border-collapse:collapse;background:#fff;border:1px solid #E6E2D9;border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:10px 9px;font-size:13px;vertical-align:top;border-bottom:1px solid #EFEDE7;word-wrap:break-word;overflow-wrap:anywhere}
+th{background:#EFEDE7;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#4A4A44;font-weight:700}
+tr:last-child td{border-bottom:none}
+td a{color:#24534E;font-weight:600}
+.tasa{font-family:Georgia,serif;font-size:19px;font-weight:700;color:#C0522F}
+.tasa.ok{color:#3F7D4A}.tasa.md{color:#B0741C}
+.nil{font-size:12.5px;color:#6B6B63;font-style:italic}
+.ant{font-size:11.5px;color:#6B6B63;display:block}
+.sig{background:#FBEDE7;border:1px solid #EBD5CB;border-radius:12px;padding:16px 18px;margin-bottom:10px}
+.sig b{color:#8F3D1F}
+.ok2{background:#E8F0EE;border:1px solid #CFE0DC;border-radius:12px;padding:16px 18px;font-size:14px;color:#24534E}
+ul{margin:6px 0 0 18px}li{font-size:14px;margin-bottom:4px}
+pre{background:#1F2421;color:#D9E4E1;border-radius:12px;padding:16px;font-size:11.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;margin-top:8px}
+.note{font-size:13px;color:#6B6B63;margin-top:8px}
 @media(max-width:900px){
- colgroup,thead{display:none}
- table,tbody,tr,td{display:block;width:100%}
- table{border:0;background:transparent}
- tr{background:#fff;border:1px solid #E6E2D9;border-radius:12px;margin-bottom:12px;padding:6px 4px}
- td{border-top:0;padding:7px 14px;display:flex;justify-content:space-between;gap:14px;text-align:right}
- td:before{content:attr(data-l);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#6B6B63;font-weight:700;text-align:left;flex:none}
- td i{display:inline;margin:0 0 0 6px}
-}</style>
-<header><div class="w"><div class="eb">Salon Profits · interno</div>
-<h1>Triage de gestión — semana del 24–30 ago</h1></div></header>
-<div class="w">
-<h2>La cartera esta semana</h2>
-<div class="cart">
-<div class="big">139 leads · 57 agendaron · 41% de agendamiento</div>
-<div class="sub">el bot sola 24% · ella 0% · esfuerzo mutuo 17%<br>
-(semana pasada: 32% — 111 leads, 36 agendaron)<br>
-3 clientas medibles, todas con etiqueta <code>informe-gestion</code>. Tasa calculada sobre los totales, no promediando tasas.</div>
-</div>
-
-<h2>Clienta por clienta</h2>
-<table><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"></colgroup>
-<thead><tr><th>Clienta</th><th>Leads</th><th>Agendaron</th><th>Tasa</th><th>Quién agendó</th><th>Antes de agendar</th><th>Después de agendar</th></tr></thead>
-<tbody><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/monica-sanchez">Monica Sanchez</a></td><td data-l="Leads">32<i>ant. 21</i></td><td data-l="Agendaron">10</td><td data-l="Tasa" class="t"><b>31%</b><i>ant. 0%</i></td><td data-l="Quién agendó">bot 6% · ella 0% · mutuo 25%</td><td data-l="Antes de agendar">26 gest. · 25 voz</td><td data-l="Después de agendar">7 gest. · 1 foto</td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/luz-zambrano">Luz Zambrano</a></td><td data-l="Leads">45<i>ant. 58</i></td><td data-l="Agendaron">18</td><td data-l="Tasa" class="t"><b>40%</b><i>ant. 41%</i></td><td data-l="Quién agendó">bot 22% · ella 0% · mutuo 18%</td><td data-l="Antes de agendar">16 gest. · 0 voz</td><td data-l="Después de agendar">8 gest. · 1 foto</td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/yessika-siller">Yessika Siller</a></td><td data-l="Leads">62<i>ant. 32</i></td><td data-l="Agendaron">29</td><td data-l="Tasa" class="t"><b>47%</b><i>ant. 38%</i></td><td data-l="Quién agendó">bot 36% · ella 0% · mutuo 11%</td><td data-l="Antes de agendar">22 gest. · 3 voz</td><td data-l="Después de agendar">18 gest. · 9 foto</td></tr></tbody></table>
-
-<h2>Señales de sistema</h2>
-<div class="nota ok"><b>Bot mudo: no.</b> Los tres bots respondieron con normalidad toda la semana
-(salientes no atribuibles: Monica 192 vs 43 la semana pasada, Yessika 457 vs 149, Luz 352 vs 371).
-Ninguna cuenta cae a cero con leads entrando.</div>
-<div class="nota"><b>Dos de los tres bots cotizan precio antes de que exista cita.</b>
-El de Monica responde «desde $350» y el de Yessika «desde $220» directo al preguntar, sin devolver una pregunta.
-El de Luz hace lo correcto: «el precio lo vemos en la evaluación, porque depende de la técnica y el estado de tus cejas».
-Es defecto nuestro de prompt, no de ellas: el molde de Luz debería copiarse a las otras dos cuentas.</div>
-<div class="nota"><b>El tope real de <code>search-contacts-advanced</code> es 100 por página, no 500.</b>
-Verificado esta corrida: Yessika devolvió 100 de 125 y Luz 100 de 160 con <code>pageLimit: 500</code>.
-Hubo que paginar con <code>searchAfter</code>. Sin paginar, las dos habrían salido con leads de menos.
-La rutina dice que 500 cabe en una página: hay que corregir esa línea.</div>
-<div class="nota"><b>Cambió el reparto de la etiqueta <code>informe-gestion</code>.</b>
-Esta semana la llevan Monica Sanchez, Yessika Siller y Luz Zambrano. Yonnelys Rosales ya no la tiene,
-así que no se midió ni se le envió nada; su página de semanas anteriores sigue publicada.</div>
-<div class="nota ok"><b>Clientas sin medir: ninguna.</b> Las tres etiquetadas tienen EpikFlow Account ID y teléfono,
-y las tres dieron firma alta (248, 1015 y 1162 salientes atribuibles), así que ningún cero es un cero falso.</div>
-
-<h2>Apéndice</h2>
-<pre>CLIENTA | locId | leads | leadsAnt | agendaron | tasa | botSola | ella | mutuo | leadSola | gestAntes | notaVoz | gestDespues | foto | noAtrib | firma | adjSinExt | url
-Monica Sanchez | eH0YUzUCJw989dc2uH5P | 32 | 21 | 10 | 31 | 6 | 0 | 25 | 0 | 26 | 25 | 7 | 1 | 192 | 248 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/monica-sanchez
-Luz Zambrano | 7WvAO3BL2teqmezlyNid | 45 | 58 | 18 | 40 | 22 | 0 | 18 | 0 | 16 | 0 | 8 | 1 | 352 | 1162 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/luz-zambrano
-Yessika Siller | M93Ti4hkqIEByM9EVKOy | 62 | 32 | 29 | 47 | 36 | 0 | 11 | 0 | 22 | 3 | 18 | 9 | 457 | 1015 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/yessika-siller
-
-ERRORES: ninguno. 3/3 clientas medidas, todas las paginas de mensajes completas
-(Monica 1105/1105, Yessika 3473/3473, Luz 4950/4950; cero duplicados tras dedup).</pre>
-<footer>Semana del lunes 24 al domingo 30 de agosto de 2026, America/New_York.
-Meta no se consulta. Se sobreescribe cada semana.</footer>
-</div></html>
+ table,thead,tbody,th,td,tr{display:block}
+ thead{display:none}
+ table{border:none;background:none}
+ tr{background:#fff;border:1px solid #E6E2D9;border-radius:12px;margin-bottom:10px;padding:6px 4px}
+ td{border-bottom:none;padding:5px 12px;display:flex;justify-content:space-between;gap:14px}
+ td:before{content:attr(data-l);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#6B6B63;font-weight:700;flex:none}
+ td>span,td>a{text-align:right}
+}
+</style><header><div class="w"><div class="eb">Salon Profits · uso interno</div><h1>Triage de gestión — semana del 31 ago–6 sep</h1></div></header><div class="w"><h2>La cartera esta semana</h2><div class="cart"><div class="big">340 leads · 74 agendaron · 22% de agendamiento</div><div class="d">el bot sola 10% · ella 0% · esfuerzo mutuo 12%</div><div class="a">8 clientas medibles (semana pasada: 25% sobre 327 leads). Gloribel Gonzalez queda fuera de la cartera: no medible.</div></div><h2>Clienta por clienta</h2><table><thead><tr><th>Clienta</th><th>Leads</th><th>Agendaron</th><th>Tasa</th><th>Quién agendó</th><th>Antes de agendar</th><th>Después de agendar</th></tr></thead><tbody><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/rosa-pedre">Rosa Pedre</a></td><td data-l="Leads"><span>30<span class="ant">antes: 22</span></span></td><td data-l="Agendaron"><span>3</span></td><td data-l="Tasa"><span class="tasa ">10%</span><span class="ant">antes: 23%</span></td><td data-l="Quién agendó"><span>bot 10% · ella 0% · mutuo 0%</span></td><td data-l="Antes de agendar"><span>0 gestionados / 0 con voz</span></td><td data-l="Después de agendar"><span>0 gestionados / 0 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/mariely-ortega">Mariely Ortega</a></td><td data-l="Leads"><span>42<span class="ant">antes: 39</span></span></td><td data-l="Agendaron"><span>5</span></td><td data-l="Tasa"><span class="tasa md">12%</span><span class="ant">antes: 10%</span></td><td data-l="Quién agendó"><span>bot 12% · ella 0% · mutuo 0%</span></td><td data-l="Antes de agendar"><span>8 gestionados / 5 con voz</span></td><td data-l="Después de agendar"><span>5 gestionados / 0 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/yonnelys-rosales">Yonnelys Rosales</a></td><td data-l="Leads"><span>31<span class="ant">antes: 13</span></span></td><td data-l="Agendaron"><span>5</span></td><td data-l="Tasa"><span class="tasa md">16%</span><span class="ant">antes: 0%</span></td><td data-l="Quién agendó"><span>bot 0% · ella 0% · mutuo 16%</span></td><td data-l="Antes de agendar"><span>30 gestionados / 13 con voz</span></td><td data-l="Después de agendar"><span>4 gestionados / 0 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/karla-bellorin">Karla Bellorin</a></td><td data-l="Leads"><span>93<span class="ant">antes: 89</span></span></td><td data-l="Agendaron"><span>16</span></td><td data-l="Tasa"><span class="tasa md">17%</span><span class="ant">antes: 13%</span></td><td data-l="Quién agendó"><span>bot 0% · ella 0% · mutuo 17%</span></td><td data-l="Antes de agendar"><span>91 gestionados / 45 con voz</span></td><td data-l="Después de agendar"><span>14 gestionados / 0 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/luz-zambrano">Luz Zambrano</a></td><td data-l="Leads"><span>32<span class="ant">antes: 45</span></span></td><td data-l="Agendaron"><span>7</span></td><td data-l="Tasa"><span class="tasa md">22%</span><span class="ant">antes: 40%</span></td><td data-l="Quién agendó"><span>bot 16% · ella 0% · mutuo 6%</span></td><td data-l="Antes de agendar"><span>11 gestionados / 3 con voz</span></td><td data-l="Después de agendar"><span>5 gestionados / 0 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/monica-sanchez">Monica Sanchez</a></td><td data-l="Leads"><span>36<span class="ant">antes: 32</span></span></td><td data-l="Agendaron"><span>11</span></td><td data-l="Tasa"><span class="tasa ok">31%</span><span class="ant">antes: 31%</span></td><td data-l="Quién agendó"><span>bot 9% · ella 0% · mutuo 22%</span></td><td data-l="Antes de agendar"><span>26 gestionados / 23 con voz</span></td><td data-l="Después de agendar"><span>8 gestionados / 0 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/yessika-siller">Yessika Siller</a></td><td data-l="Leads"><span>40<span class="ant">antes: 62</span></span></td><td data-l="Agendaron"><span>14</span></td><td data-l="Tasa"><span class="tasa ok">35%</span><span class="ant">antes: 47%</span></td><td data-l="Quién agendó"><span>bot 18% · ella 0% · mutuo 17%</span></td><td data-l="Antes de agendar"><span>29 gestionados / 23 con voz</span></td><td data-l="Después de agendar"><span>12 gestionados / 5 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/maria-guerrero">Maria Guerrero</a></td><td data-l="Leads"><span>36<span class="ant">antes: 25</span></span></td><td data-l="Agendaron"><span>13</span></td><td data-l="Tasa"><span class="tasa ok">36%</span><span class="ant">antes: 12%</span></td><td data-l="Quién agendó"><span>bot 25% · ella 0% · mutuo 11%</span></td><td data-l="Antes de agendar"><span>14 gestionados / 10 con voz</span></td><td data-l="Después de agendar"><span>4 gestionados / 1 con foto</span></td></tr><tr><td data-l="Clienta"><a href="https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/gloribel-gonzalez">Gloribel Gonzalez  (no medible)</a></td><td data-l="Leads"><span>22<span class="ant">antes: 24</span></span></td><td data-l="Agendaron"><span>12</span></td><td data-l="Tasa"><span class="tasa ok">55%</span><span class="ant">antes: 38%</span></td><td data-l="Quién agendó"><span>no medible (sin mensajes)</span></td><td data-l="Antes de agendar"><span>no medible</span></td><td data-l="Después de agendar"><span>no medible</span></td></tr></tbody></table><p class="note">Ordenada de menor a mayor tasa de agendamiento. «Quién agendó» es participación antes de la cita, no autoría; los cubos suman la tasa por construcción.</p><h2>Señal de sistema — problema nuestro</h2><div class="sig"><b>Export de mensajes mudo — Gloribel Gonzalez (Ee1hPAmQJXHO20f7hJp3)</b><br>export-messages-by-location devuelve total: 0 para toda la cuenta, comprobado con dos ventanas distintas (21 ago–7 sep y 1 jul–7 sep). Las citas y los contactos sí llegan: entraron 22 leads y agendaron 12 (55%, su mejor tasa), y el bot creó 7 citas, así que la cuenta está viva. Lo que no se puede leer es la conversación, y sin ella la firma sale 0 y la compuerta la marca no_medible. Su página se publicó con la tasa y la tendencia, sin bloques de gestión. Problema nuestro: revisar el proveedor de conversaciones de esa subcuenta.</div><div class="sig"><b>Las citas de tres cuentas hubo que transcribirlas a mano</b><br>get-calendar-events devuelve el resultado en línea (no a archivo) cuando la cuenta tiene pocas citas, y compactar.py solo lee de disco. Pasó con Rosa Pedre, Mariely Ortega, Monica Sanchez, Yonnelys Rosales y Maria Guerrero: se transcribieron solo las citas con dateAdded dentro de las dos semanas medidas, que son las únicas que el script usa. Los números no cambian, pero es un paso manual y frágil que conviene resolver en la rutina.</div><h2>Sin medir</h2><ul><li>Gloribel Gonzalez — medida en leads y citas, pero no medible en gestión: el export de mensajes de su subcuenta devuelve 0 (ver señal de sistema).</li></ul><h2>Apéndice</h2><pre>CLIENTA | locId | leads | leadsAnt | agendaron | tasa | botSola | ella | mutuo | leadSola | gestAntes | notaVoz | gestDespues | foto | noAtrib | firma | adjSinExt | url
+Rosa Pedre | 78ZbrC0ORSr26exRs1oO | 30 | 22 | 3 | 10 | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 18 | 127 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/rosa-pedre
+Mariely Ortega | zje8PfQCkFptCr5fkGsg | 42 | 39 | 5 | 12 | 12 | 0 | 0 | 0 | 8 | 5 | 5 | 0 | 289 | 170 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/mariely-ortega
+Yonnelys Rosales | xzyBSl9piwIJFqjqlWb4 | 31 | 13 | 5 | 16 | 0 | 0 | 16 | 0 | 30 | 13 | 4 | 0 | 75 | 676 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/yonnelys-rosales
+Karla Bellorin | ZuuZM63sPz90iKfc9wvM | 93 | 89 | 16 | 17 | 0 | 0 | 17 | 0 | 91 | 45 | 14 | 0 | 638 | 3621 | 3 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/karla-bellorin
+Luz Zambrano | 7WvAO3BL2teqmezlyNid | 32 | 45 | 7 | 22 | 16 | 0 | 6 | 0 | 11 | 3 | 5 | 0 | 196 | 865 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/luz-zambrano
+Monica Sanchez | eH0YUzUCJw989dc2uH5P | 36 | 32 | 11 | 31 | 9 | 0 | 22 | 0 | 26 | 23 | 8 | 0 | 232 | 397 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/monica-sanchez
+Yessika Siller | M93Ti4hkqIEByM9EVKOy | 40 | 62 | 14 | 35 | 18 | 0 | 17 | 0 | 29 | 23 | 12 | 5 | 286 | 1223 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/yessika-siller
+Maria Guerrero | HOjXqCpcXHH6D9Zan7OG | 36 | 25 | 13 | 36 | 25 | 0 | 11 | 0 | 14 | 10 | 4 | 1 | 213 | 797 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/maria-guerrero
+Gloribel Gonzalez | Ee1hPAmQJXHO20f7hJp3 | 22 | 24 | 12 | 55 | 32 | 23 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | https://reportes-salon-profits-jesus-projects-f452bb68.vercel.app/gloribel-gonzalez</pre></div></html>
