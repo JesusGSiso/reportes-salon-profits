@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ranking semanal de agendamiento — Salon Profits. v5.
+"""Ranking semanal de agendamiento — Salon Profits. v6.
 
 Recibe los numeros ya medidos y produce un PNG por clienta destinataria, una
 imagen general para Jesus y Rossana, y resultado.json con puestos, zona y los
@@ -14,11 +14,17 @@ Cambios v5 (medidos el 7 sep 2026, no estimados):
   - --destinatarias: solo se renderiza PNG personal para quien de verdad lo
     recibe. Las demas se siguen midiendo y rankeando (cuentan para el ranking y
     para el record) pero no se publica una imagen con su nombre que nadie abre.
+
+Cambios v6 (8 sep 2026):
+  - el icono de medalla (1f396) tenia un byte corrupto en el IDAT: no
+    decodificaba y el puesto #3 caia siempre al circulo dorado de respaldo.
+  - la linea del record se salia por la derecha con record presente; ahora
+    prueba variante larga/corta y baja el cuerpo hasta 15 px para que quepa.
 """
 import argparse, base64, hashlib, io, json, math, os, sys, urllib.request, zipfile
 from PIL import Image, ImageDraw, ImageFont
 
-VERSION = 5
+VERSION = 6
 
 LINEA = 25
 BUENO = 40
@@ -40,7 +46,7 @@ INTER_ZIP = "https://github.com/rsms/inter/releases/download/v4.0/Inter-4.0.zip"
 ICONOS_B64 = {
     "1f3c6": "iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAq1BMVEVHcEz/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/rDP/rDP/rDP/rjX/vkL/rDP/rDP/rDP/tDr/xEf/rDP/vED/rDP/rDP/wEP/sDb/rDP/rDP/zE3/zE3/rDP/rDP/rDP/zE3/zE3/zE3/zE3/zE3/rDP/rDP/wkX/ykv/xkj/tjv/sjj/uD3BaU/BaU/BaU/BaU/BaU/BaU/BaU/BaU/BaU/BaU/BaU/Lbtl5AAAAOXRSTlMAIHCAj79g/zCvgN/////vEM///6//v0D//2CfQO8gcI9Qz5/fEDBQ////////MK//72BQv99AzyD2svjjAAACS0lEQVR4AdXWB5azOgwF4JvqDCgPMyEwkz6997r/jU0RKRbnkMjw2v8t4B5LyDIoQqPZ+tXulGs1G9ipa1Ta2KFnWP2kPaPVAIqCkFb6Ru0vWokCCwA2po19ozagjdgCSMgxNHrkSIGMXAdG75AcI4zJNTB6++SIEdUPYqClJLMAOkZvAtgsKAYlYH5Bv4JCUAZmvINsIQi5qXcQKIeYmK1aGohFGBPLqgbNiKWYEwu87izr4deI2ALZKpG1jB7Ygth8UyM7MmrHYPG6NSGxGX41jNoJGOUskBAbgZ0arS5+ZcTCzWguwE48N2RALN1kxp5NOgZLiAXujLMzz+UfOY0JxUjueU3RjHLnAJASC7zetVOwC8q5/Uq87m1TjGPspobItY3GGVhKLBF1WrCGxzSCRFsi0W109CvkXK7FVIwkJmanDnIjys3gdju06iNNkIspV8gda4/UQW5OYgfhXD5JQEdzIJuNiWRTEJG0r/99YCMsBVRwqX30WYQVG5N0eKX6MVq6wNp5RNLQlLrqlxTGbErStSlzQ0I0gpQl5Lo1JS7JFQYWO7RK1scZfHXK95mfs9PyNeSnNy3dHp56pmAPFXWNcHyGqiZXsq7qbjeDOUQNM+oP80MNbgk1ZETUvzsYDG/5EaxuLi95dWNyBKguJkeKyiwJqGxErH6TEhIW1SuTojofXxihmpAK0jqtFjJ4uX943OrpWZnz9LjLCzReH3d6g8ajwh8YdP/6qPT0jm0+HtWeFGXp/G1B99ji6VHvE1s865NeIXwDBvTA37rZqRcAAAAASUVORK5CYII=",
     "1f451": "iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAwFBMVEVHcEz1kQ3/zE30kAz5rzz/zE3/zE3/zEz/zE3/zE3/zE3/zE30kAz/rDPnWy70kAz0kAz0kAz/zE30kAzdLkT/zE30kAz0kAz5oyT/zE3/zE3dLkT/zE3dLkTdLkTdLkT/zE3dLkT8vD6YHOv0kAz/xEdckTuur0T3nxz4piP6ri3YiojgO0XCtkb/rDP1yEzzk0q/XrC4U7pmlTyySMSFoED2mhaZp0LjwkrTvEioN9LloHXsc0jufUn3pUueJ+FYKgbxAAAAIHRSTlMA7+8gEEAwgJ+/r2BghDCfgECPz7ogv49Qz9/vcM+PIBitsd0AAAKvSURBVHhe7ZXXctswEEVBCuyyqi3JtpKAqsW1l9T//6sQWGC9AmUOZXIyycTnSXMJHCywIMX+O7wwHvN8zMdx6O3jCUTGcc7Ej2UelPccCUVo5yHkR3sUpHDt3IU8eKeo2el03ynyydZ4f5bRplvzy1lwhqvOojNTqJqOXPSXNuHCAxB1oNR9PSyCGUSE/qiEoNFtmEPCNg9BNHq9Fj4ZTAmiaKzbk01owspFhx1ag9k4igLGeiIjUYGTiRw12SU3r6VTvKcu3xrMEhn2mBC475nEPMK12zJtQkFAgoP1eUqoqG32cCIEltRVeoergoATHExE4AuYOY5h5vGEIaRdCzH2oAl9DocMpfAYGmH2PaIzhC8LgpJ8Qf0jmb22OObww1WmpprR4uKVaDDTdCIS85aDJ+e7WIjcNse71w8EYWVEDk2DvsoGssPyQBmgv2KNGTCnookRTWg612FDf+vI+yBic4fXKKElrbbTNaRDFmPTsX89B5emTIpSpyeoqEdXeRQWKyyI8kir7zEgoA83tmiCBVE2dNGAAQk9wrmwWVkF5ccmDPBwceuoMZ3k0zVJPVskNviQsoKCbP1G2CJG1hE7mNh2eyhDUUXIH18lXPKpr0RUvyisJgrJf30lgnKi54vl8uKqnCgp0DwsFE8FqgRF3puei7uF5u75TZG3U3R2P53efjP1gAdMV9aIvKj1KU3PryG8mSrOQPSwIDztGvHjPE0Pv2jPaSpRprOpRq34vNjiKj/ieyo55Up0mCrOpeirEd1I0XJb9LI14la+zinwWYlSzc9MNDXc7xAthT3iWosOaxPVtrXaDrvG9gPx1oX8td+FjMFR/Na+lHhFAioq89JWEdHPSDUR8qdFXhWR9zeLDi4rcYCiy4rUJqp/a2w0r8Don27/R/uL+eA3t4HcDMEeM50AAAAASUVORK5CYII=",
-    "1f396": "iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAhFBMVEVHcEz/rDP/rDP/rDP/rDP/rDNVrO7/rDP/rDP/rDP/rDNVrO5VrO5VrO5VrO5VrO7dLkTdLkTh6O1VrO7h6O3h6O1VrO7h6O3h6O3/rDP/2YP/03n/yGX/t0f/xWD/rzj/ukz/y2r/vVH/0XT/wFb/sj3/zm//tEL/w1tVrO7dLkTh6O0wA2ovAAAAGXRSTlMAgDDP72Dfv1AgEFBgnxAwn8/v71CAz78gncDqBAAAAbVJREFUeF7szDkawjAMBeFXqfGWdbnCg/vfD+ggnxPJLqg05RQ/KgUh+Xz3OPV5JCXAVCDvIdImiQ4JDGXqEP8KoR9yyCGHHHLIoU2HNliKOhRhKmlQgq2c7qEEc3G+huaIhopcQVLQVN7r0J7R2lqDVnS0TGdoWtDVMf4644Hehm9neBVXBjkOwjAMLVAU4Ab+hKShpe39TzhyjLBURpram3n7PMXOt3NxMwVSKExukXjU5BbRB/8tGgN9EEaPZ7jSietg9/QiuMUZAOZ4E1Vvvg8xS7WkVF0LMcY7jbWuBKYQFTCpVjfaExRRWYlWVKI5TYPeB8hEGUKyFtdxfyAUlhYI3Kfue0/LZ2cclR21YWZr+7Wo4XffTz4zi/Jz93IKGlOrIzKdyIimdktl9AtSm0kElNOVcgEsoklEkmVBc77ZRZIbJYFxlMbc1XOHTzRrGoWiQTI+P/NQ0eMYt+AI5KaiTQNpHxFp0bpKk3REjEMrleUIxCy1ydBa92yq516yal9sljj0jsUWlzd23kvUxWZftYquWv/yB5zL3/8d+T9I/5fto+9IoW64+GmbIJbQ/JHnHzqGIIVbgMLwAAAAAElFTkSuQmCC",
+    "1f396": "iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAhFBMVEVHcEz/rDP/rDP/rDP/rDP/rDNVrO7/rDP/rDP/rDP/rDNVrO5VrO5VrO5VrO5VrO7dLkTdLkTh6O1VrO7h6O3h6O1VrO7h6O3h6O3/rDP/2YP/03n/yGX/t0f/xWD/rzj/ukz/y2r/vVH/0XT/wFb/sj3/zm//tEL/w1tVrO7dLkTh6O0wA2ovAAAAGXRSTlMAgDDP72Dfv1AgEFBgnxAwn8/v71CAz78gncDqBAAAAbVJREFUeF7szDkawjAMBeFXqfGWdbnCg/vfD+ggnxPJLqg05RQ/KgUh+Xz3OPV5JCXAVCDvIdImiQ4JDGXqEP8KoR9yyCGHHHLIoU2HNliKOhRhKmlQgq2c7qEEc3G+huaIhopcQVLQVN7r0J7R2lqDVnS0TGdoWtDVMf4644Hehm9neBVXBjkOwjAULVAU4Ab+hKShpe39TzhyjLBURpram3n7PMXOt3NxMwVSKExukXjU5BbRB/8tGgN9EEaPZ7jSietg9/QiuMUZAOZ4E1Vvvg8xS7WkVF0LMcY7jbWuBKYQFTCpVjfaExRRWYlWVKI5TYPeB8hEGUKyFtdxfyAUlhYI3Kfue0/LZ2cclR21YWZr+7Wo4XffTz4zi/Jz93IKGlOrIzKdyIimdktl9AtSm0kElNOVcgEsoklEkmVBc77ZRZIbJYFxlMbc1XOHTzRrGoWiQTI+P/NQ0eMYt+AI5KaiTQNpHxFp0bpKk3REjEMrleUIxCy1ydBa92yq516yal9sljj0jsUWlzd23kvUxWZftYquWv/yB5zL3/8d+T9I/5fto+9IoW64+GmbIJbQ/JHnHzqGIIVbgMLwAAAAAElFTkSuQmCC",
 }
 
 
@@ -175,10 +181,22 @@ def dibujar(rank, etiqueta, me_slug, assets, record=None, ventana_dias=7, tapar_
     y = 168
     for l in envolver(f_sub, sub, 950):
         texto(dr, (64, y), l, f_sub, (189, 180, 201)); y += 32
-    f_m = F("SemiBold", 20)
-    lin = f"Aprobado desde {LINEA}%  ·  bueno desde {BUENO}%"
+    base = f"Aprobado desde {LINEA}%  ·  bueno desde {BUENO}%"
+    lin, f_m = base, F("SemiBold", 20)
     if record and record.get("tasa"):
-        lin += f"  ·  récord Salon Profits: {record['tasa']}% ({nombre_tapado(record.get('nombre',''))}, {record.get('etiqueta','')})"
+        quien = nombre_tapado(record.get("nombre", ""))
+        largo = base + f"  ·  récord Salon Profits: {record['tasa']}% ({quien}, {record.get('etiqueta','')})"
+        corto = base + f"  ·  récord Salon Profits: {record['tasa']}% ({quien})"
+        for cand in (largo, corto):
+            for tam in range(20, 14, -1):
+                if ancho(F("SemiBold", tam), cand) <= W - 128:
+                    lin, f_m = cand, F("SemiBold", tam)
+                    break
+            else:
+                continue
+            break
+        else:
+            lin, f_m = corto, F("SemiBold", 15)
     texto(dr, (64, y + 8), lin, f_m, MUT)
 
     y = top_h
