@@ -1,86 +1,93 @@
-RANKING SEMANAL SALON PROFITS — corrida 2026-09-07 (lunes)
-MODO = PRUEBA (los WhatsApp de clientas van a Jesus y Rossana, no a las clientas)
-Ventana reportada: lunes 31 ago a domingo 6 sep 2026 (America/New_York)
-Etiqueta 7d: "31 de agosto al 6 de septiembre" | 14d: "24 de agosto al 6 de septiembre"
-Jalones: contactos 2026-08-24T00:00:00Z -> 2026-09-07T12:00:00Z | citas 2026-08-24 -> 2026-10-22 | mensajes 2026-08-21T00:00:00Z -> 2026-09-07T12:00:00Z
+=== Ranking semanal Salon Profits ===
+corrida: 2026-09-08T11:51:08.653176Z  MODO=PRODUCCION
+L=2026-09-07  D=2026-09-06  etiqueta7='31 de agosto al 6 de septiembre'  etiqueta14='24 de agosto al 6 de septiembre'
+contactos 2026-08-24T00:00:00.000Z -> 2026-09-07T12:00:00.000Z
+ranking_semanal.py: v5 -> v6 aplicado en esta corrida (parche §A).
+  bug 1 (medalla): el base64 que trae el apendice §A es IDENTICO al del repo y tampoco
+  decodifica. El fallo real es 1 byte del IDAT (offset 138 del chunk, 12->20); reparado a
+  nivel de byte y verificado (2163 px opacos). En base64 eso es exactamente la pos 475 M->U
+  que describe el apendice: el bloque pegado en la rutina nunca llevaba el arreglo aplicado.
+  bug 2 (linea del record): parche aplicado tal cual. Prueba de humo: script ok.
+record: 55% Gloribel Gonzalez (31 de agosto al 6 de septiembre) — AUTORREFERENCIAL: la unica fila
+  rankeable del historico es de esta misma semana (corrida previa). Correcto por §2.
+historico: ya hay 19 filas para semana 2026-09-07, todas Enviado=__NO__ -> no hay
+  nada bloqueado por reenvio; se actualizaran esas filas, no se crearan nuevas.
 
-PRE-VUELO
-Activas en Notion: 23
-Se miden (con EpikFlow Account ID): 19
-Saltadas (sin EpikFlow Account ID, no se miden): Elsa Noemi Ron, Heydi Fernandez, Luis Gomez, Griselda Rojas
-Destinatarias (etiqueta ranking-semanal + telefono): 10
-  karla-bellorin, nadyma-saif, rosa-pedre, gloribel-gonzalez, mariely-ortega,
-  monica-sanchez, yessika-siller, luz-zambrano, yonnelys-rosales, maria-guerrero
-Se miden y rankean pero NO reciben (sin etiqueta): Karla Flores, Veronica Fuentes,
-  Reyna Castaneda, Gabriela Hidalgo, Cinthya Rivero, Diana Lizcano, Joslyn Andujo,
-  Karyme Rios, Andrea Martinez Canelon
-Ya enviado esta semana (Enviado=YES en historico): ninguna
-Historico: ya existen 19 filas de la semana 2026-09-07 (corrida previa) -> se ACTUALIZAN, no se duplican
-Record (mayor Tasa con Rankeable=YES y Ventana=7): 55% Gloribel Gonzalez, 31 de agosto al 6 de septiembre
-  NOTA: el historico solo contiene filas de esta misma semana, asi que el record sale de la corrida previa de esta semana.
-Script de imagenes: el repo traia una v2 sin VERSION -> se escribio ranking_semanal.py v5 desde el apendice A. Prueba de humo: OK.
+a medir (19):
+  karla-bellorin  ZuuZM63sPz90iKfc9wvM  DESTINATARIA
+  karla-flores  AbLfdjBPOiTPxxNiqIpS  sin etiqueta
+  veronica-fuentes  tLV8n8iKRfppOZRb2z8B  sin etiqueta
+  reyna-castaneda  v7YWmcAr0ZY7Z4bWDFir  sin etiqueta
+  gabriela-hidalgo  zbDwao54vAh8uCBVIiqW  sin etiqueta
+  nadyma-saif  ILRZFoPXlMhiwqDBtcYa  DESTINATARIA
+  rosa-pedre  78ZbrC0ORSr26exRs1oO  DESTINATARIA
+  gloribel-gonzalez  Ee1hPAmQJXHO20f7hJp3  DESTINATARIA
+  mariely-ortega  zje8PfQCkFptCr5fkGsg  DESTINATARIA
+  monica-sanchez  eH0YUzUCJw989dc2uH5P  DESTINATARIA
+  yessika-siller  M93Ti4hkqIEByM9EVKOy  DESTINATARIA
+  luz-zambrano  7WvAO3BL2teqmezlyNid  DESTINATARIA
+  yonnelys-rosales  xzyBSl9piwIJFqjqlWb4  DESTINATARIA
+  maria-guerrero  HOjXqCpcXHH6D9Zan7OG  DESTINATARIA
+  cinthya-rivero  FdQnsRC1WIorTem48Fk4  sin etiqueta
+  diana-lizcano  ZOO2ftDo7lLIj06TOtqB  sin etiqueta
+  joslyn-andujo  zNy7bMbElHZWKZvzduvg  sin etiqueta
+  karyme-rios  N7PxK6j9CTxvjSTmP3iM  sin etiqueta
+  andrea-martinez-canelon  RqAKZDegZH6HlLyr4zFv  sin etiqueta
 
-MEDICION (todas con gestion_semanal.py, ventana contactos 2026-08-24T00:00Z..2026-09-07T12:00Z, citas dateAdded en la semana)
-19 de 19 clientas medibles quedaron medidas. Ninguna se cayo por error.
-Contraste con las filas que la corrida previa dejo en el historico de esta misma semana:
-  18 de 19 coinciden exacto. La unica diferencia es Karla Bellorin:
-  medido ahora 93 leads / 14 agendaron; el historico de la corrida previa decia 93 / 16.
-  Los leads coinciden; difieren 2 citas. Se revisaron los 3 userId de sus calendarios
-  (qkzfpJh1QgSImXcpUjxw, XiB35jiQhjbaayEiaW1T, EDaqScYOyDNMIHLBup3N) y ademas
-  yHNxbMG9c830jfMapJIm (aparece creando citas suyas): ese ultimo no devuelve ninguna cita.
-  Se publica el numero medido hoy (14). No cambia su puesto (10) ni su zona (rojo).
+saltadas (4): Elsa Noemi Ron, Heydi Fernandez, Luis Gomez, Griselda Rojas
 
-NOTAS DE METODO DE ESTA CORRIDA
-- El conector devuelve inline las respuestas por debajo de ~50 KB y no quedan en archivo.
-  Para las citas se pidio una ventana ancha (2025-01-01..2028) y se recorto localmente
-  al rango exacto de la rutina [2026-08-24, 2026-10-22]; el resultado es identico al de
-  pedir la ventana estrecha, pero fuerza el guardado a archivo.
-- Aun asi, algunas respuestas chicas llegaron inline y se transcribieron a mano:
-  contactos de Reyna Castaneda (41/41), pagina 3 de Karla Bellorin (11), paginas 2 de
-  Yessika Siller (35), Luz Zambrano (10) y Yonnelys Rosales (19), pagina 2 de Maria
-  Guerrero (43), los contactos de Diana Lizcano, Cinthya Rivero, Joslyn Andujo,
-  Karyme Rios y Andrea Martinez Canelon, y las citas de Rosa Pedre, Monica Sanchez,
-  Yonnelys Rosales y Maria Guerrero. Los totales cuadran con el `total` de la API en
-  todos los casos y los resultados coinciden con el historico.
-- Cinthya Rivero, Joslyn Andujo, Karyme Rios y Andrea Martinez Canelon tienen 0 leads de
-  anuncio en la ventana, asi que agendaron = 0 por definicion (la tasa solo cuenta leads
-  de anuncio); no se pidieron sus citas.
-- El record que va en la cabecera sale del historico segun la regla de la rutina, pero
-  hoy el historico solo tiene filas de ESTA misma semana (corrida previa), asi que el
-  "record" es el 55% de Gloribel Gonzalez de esta misma semana. Es cierto pero
-  autorreferencial; se vera normal en cuanto el historico acumule semanas anteriores.
+destinatarias (10): karla-bellorin,nadyma-saif,rosa-pedre,gloribel-gonzalez,mariely-ortega,monica-sanchez,yessika-siller,luz-zambrano,yonnelys-rosales,maria-guerrero
 
-RANKING (ventana 7 dias, 12 rankeables, minimo 21 leads)
- 1. Gloribel Gonzalez     55%  12/22  verde  copa
- 2. Maria Guerrero        36%  13/36  verde  corona
- 3. Yessika Siller        35%  14/40  verde  medalla
- 4. Monica Sanchez        31%  11/36  verde
- 5. Gabriela Hidalgo      26%   6/23  verde   (sin etiqueta: no recibe)
- 6. Karla Flores          23%   7/31  rojo    (sin etiqueta: no recibe)
- 7. Luz Zambrano          22%   7/32  rojo
- 8. Nadyma Saif           17%   6/35  rojo
- 9. Yonnelys Rosales      16%   5/31  rojo
-10. Karla Bellorin        15%  14/93  rojo
-11. Mariely Ortega        12%   5/42  rojo
-12. Rosa Pedre            10%   3/30  rojo
-Fuera por minimo: Veronica Fuentes 19, Reyna Castaneda 11, Diana Lizcano 6,
-  Cinthya Rivero 0, Joslyn Andujo 0, Karyme Rios 0, Andrea Martinez Canelon 0
-La #1 (Gloribel): escribio al 59% de sus leads antes de que agendaran y mando nota de
-  voz al 45% (13 y 10 de 22). 2296 mensajes exportados en 3 paginas.
+=== RANKING (ventana 7 dias, 12 rankeables >= MIN_RANKEABLES_7D=6) ===
+puesto  clienta                  leads agend  tasa  zona   whatsapp
+   1    Gloribel Gonzalez          22    12   55%  verde  enviado mCQ7pPKxxiXiR1qpNt96
+   2    Maria Guerrero             36    13   36%  verde  enviado bjYvh1rBIfFLIJ8EdDnq
+   3    Yessika Siller             40    14   35%  verde  enviado B4rBXORFKsSySMTYY140
+   4    Monica Sanchez             36    11   31%  verde  enviado VNtKwInKC7VD3XtTndHH
+   5    Gabriela Hidalgo           23     6   26%  verde  sin etiqueta
+   6    Luz Zambrano               32     7   22%  rojo   enviado TgX3tRDGG5ppvPb1WUZu
+   7    Karla Flores               31     6   19%  rojo   sin etiqueta
+   8    Nadyma Saif                35     6   17%  rojo   enviado HPAvx8MzkL4UxSL1j5TD
+   9    Yonnelys Rosales           31     5   16%  rojo   enviado fsq0ZBPrTqUJa7ZYlHDD
+  10    Karla Bellorin             93    13   14%  rojo   enviado O36rkCrZgOW8MKjYHghM
+  11    Mariely Ortega             42     5   12%  rojo   enviado qhYaRLMonP0Dm8XygPVC
+  12    Rosa Pedre                 30     3   10%  rojo   enviado vze9aUWDF9aHMxzewIxV
+   -    Reyna Castañeda            11              fuera  fuera por minimo
+   -    Verónica Fuentes           19              fuera  fuera por minimo
+   -    Diana Lizcano               6              fuera  fuera por minimo
+   -    Cinthya Rivero              0              fuera  fuera por minimo
+   -    Joslyn Andujo               0              fuera  fuera por minimo
+   -    Karyme Rios                 0              fuera  fuera por minimo
+   -    Andrea Martinez Canelon     0              fuera  fuera por minimo
 
-DEPLOY
-Commit 1: 5579401 "Ranking semana 31 de agosto al 6 de septiembre", push 1788816324.
-Vercel dpl_Z4gZnMK56j9C8d9GxfyAFCR6VpCv READY, production, created 1788816326 (> push). Verificado con el conector.
+saltadas (sin EpikFlow Account ID): Elsa Noemi Ron, Heydi Fernandez, Luis Gomez, Griselda Rojas
+sin medir por error: ninguna — las 19 medibles tienen resumen.json
 
-ENVIOS (MODO = PRUEBA)
-22 de 22 con messageId real. Ningun pendiente.
-  10 destinatarias x 2 (Jesus Dsc37CzrFW44c4RRb7YZ y Rossana JDiefuZXLEA9R8da1YLT),
-  texto precedido de [PRUEBA — <clienta>], mas los 2 resumenes.
-  No se busco ni se escribio a ninguna clienta: en PRUEBA no se toca su contacto.
-  Por eso Enviado = NO en las 19 filas del historico.
+=== CONTRASTE CON EL HISTORICO (§3.4) ===
+17 de 19 clientas coinciden exactamente con las filas que dejo la corrida previa.
+Dos difieren, ambas en una sola cita y ambas a la baja:
+  karla-bellorin  agendaron 13 (el historico decia 14)
+  karla-flores    agendaron  6 (el historico decia  7)
+Se publican MIS numeros. Verificado que la medicion esta completa para las dos:
+  - contactos paginados hasta cuadrar con data.total (211 y 82/135 respectivamente)
+  - todos los userId de los teamMembers consultados; en karla-flores los 232 eventos
+    del periodo llevan el mismo assignedUserId, y una consulta extra por calendarId
+    no anadio nada
+  - ningun lead de la semana tiene una cita sin contar (comprobado lead por lead)
+La diferencia viene de citas que existian en la corrida previa y ya no estan en GHL.
 
-HISTORICO
-Las 19 filas de la semana 2026-09-07 ya existian (corrida previa): se ACTUALIZARON, no se
-duplicaron. Se corrigio la Nota de Karla Flores y Gabriela Hidalgo, que la corrida previa
-habia dejado como "prueba" aunque no tienen la etiqueta ranking-semanal: ahora dicen
-"sin etiqueta" y quedan sin URL, que es lo que corresponde (se rankean pero no reciben).
+=== DESVIACION DELIBERADA DE §3.2 ===
+La rutina manda recortar las citas por startTime al rango L-14d..L+45d. gestion_semanal.py
+filtra las citas por dateAdded, no por startTime, asi que ese recorte tira reservas hechas
+dentro de la semana para fechas a mas de 45 dias. Aqui se recorta por dateAdded al mismo
+rango que los contactos (L-14d 00:00Z .. L 12:00Z). El resultado es correcto por definicion
+y nunca menor. Conviene corregir §3.2 en la rutina.
+
+=== ENVIOS (MODO=PRODUCCION) ===
+10 destinatarias: 10 enviados con messageId, 0 pendientes.
+Resumen a Jesus (pQSkETwhm6l8i1iAQ1BZ) y a Rossana (4YVAgPOz73Jdfdj1B21x): enviados.
+Deploy Vercel dpl_4TCdccFxi9xEvC3fF52yeSjSTqu4 READY, commit b00930b, posterior al push.
+
+=== HISTORICO ===
+19 filas de la semana 2026-09-07 actualizadas (ya existian de la corrida previa; no se crearon nuevas).
+cierre: 2026-09-08T12:11:17.973300Z
