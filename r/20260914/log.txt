@@ -1,0 +1,82 @@
+RANKING SEMANAL — Salon Profits
+MODO = PRODUCCION
+Corrida: lunes 2026-09-14 (America/New_York)
+Semana reportada: 2026-09-07 a 2026-09-13 · etiqueta "7 al 13 de septiembre"
+Jalones: contactos 2026-08-31T00:00:00Z → 2026-09-14T12:00:00Z
+         citas startTime ms en 2026-08-31 → 2026-10-29 (pedidas 2025-01-01→2028, recorte local)
+         mensajes 2026-08-28T00:00:00Z → 2026-09-14T12:00:00Z
+ranking_semanal.py VERSION = 6 ya en el repo (apéndice A no aplicado, no hace falta)
+Prueba de humo: script ok
+Pull de main: OK (HEAD d974451)
+
+PRE-VUELO
+Medibles (21): karla-bellorin, karla-flores, veronica-fuentes, reyna-castaneda,
+  gabriela-hidalgo, nadyma-saif, rosa-pedre, gloribel-gonzalez, mariely-ortega,
+  monica-sanchez, yessika-siller, luz-zambrano, yonnelys-rosales, elsa-noemi-ron,
+  maria-guerrero, cinthya-rivero, diana-lizcano, joslyn-andujo, griselda-rojas,
+  karyme-rios, andrea-martinez-canelon
+Destinatarias (10, etiqueta ranking-semanal + teléfono): karla-bellorin, nadyma-saif,
+  rosa-pedre, gloribel-gonzalez, mariely-ortega, monica-sanchez, yessika-siller,
+  luz-zambrano, yonnelys-rosales, maria-guerrero
+Rankeadas sin WhatsApp (sin etiqueta): karla-flores, reyna-castaneda, gabriela-hidalgo,
+  elsa-noemi-ron, cinthya-rivero, diana-lizcano, joslyn-andujo, griselda-rojas,
+  karyme-rios, andrea-martinez-canelon
+Rankeada sin WhatsApp (sin etiqueta y sin teléfono): veronica-fuentes → nota "sin etiqueta"
+Saltadas (sin EpikFlow Account ID, no se miden): Heydi Fernandez, Luis Gomez, Vany Gonzalez
+Récord del histórico (Rankeable, ventana 7): 55% Gloribel Gonzalez, 31 de agosto al 6 de septiembre
+  (es de la semana 2026-09-07 — semana anterior, no autorreferencial)
+Ya enviado esta semana (2026-09-14): ninguna fila en el histórico → se envía a todas
+
+MEDICION (21/21 completas, §3.4 sin faltantes)
+Ventana usada: 7 días (8 rankeables ≥ MIN_RANKEABLES_7D=6). SUSPENDIDO = false.
+
+CONTRASTE CON EL HISTORICO (la semana pasada quedó registrada como Semana 2026-09-07,
+que en esta corrida es "semana_anterior"). Coinciden 16 de 21. Difieren en Agendaron:
+  karla-bellorin  9 (histórico 13)     nadyma-saif     4 (histórico 6)
+  veronica-fuentes 2 (histórico 3)     yonnelys-rosales 4 (histórico 5)
+  maria-guerrero 10 (histórico 13)
+Leads coinciden en las 21. Publico con los números de ESTA corrida: medición fresca,
+21/21 completas, y el jalón de citas de esta semana (startTime 31 ago → 29 oct) es el
+que manda. La diferencia solo afecta `tasa_ant`, que es el delta decorativo de la
+imagen; no cambia el ranking ni ninguna tasa de la semana reportada.
+
+RANKING (ventana 7 días · etiqueta "7 al 13 de septiembre")
+ #  Clienta                   Leads Agend Tasa  Zona     WhatsApp
+ 1  Maria Guerrero               26    11  42%  buena    enviado
+ 2  Yessika Siller               25    10  40%  buena    enviado
+ 3  Luz Zambrano                 41    15  37%  verde    enviado
+ 4  Nadyma Saif                  32     9  28%  verde    enviado
+ 5  Verónica Fuentes             21     4  19%  roja     sin etiqueta
+ 6  Karla Bellorin              106    14  13%  roja     enviado
+ 7  Mariely Ortega               27     3  11%  roja     enviado
+ 8  Yonnelys Rosales             36     3   8%  roja     enviado
+Copa #1 Maria Guerrero · corona #2 Yessika Siller · medalla #3 Luz Zambrano.
+Récord de cabecera: 55% Gloribel Gonzalez (31 de agosto al 6 de septiembre).
+
+La #1 (§5): export-messages-by-location devolvió 4.470 mensajes; se leyeron las
+4 páginas que permite la rutina = 4.000 únicos (1.213 salientes con firma, así que
+es medible). gestionados_antes_de_agendar = 16 de 26 (62%), con_nota_de_voz = 16 (62%).
+Las 470 no leídas son las más recientes del tramo; el tope de 4 páginas es de la rutina.
+
+FUERA POR MÍNIMO (21 leads), no reciben imagen ni WhatsApp:
+Rosa Pedre 20, Gabriela Hidalgo 19, Monica Sanchez 19, Gloribel Gonzalez 18,
+Karla Flores 17, Reyna Castañeda 14, Cinthya Rivero 11, Andrea Martinez Canelon 8,
+Diana Lizcano 3, Elsa Noemi Ron 0, Joslyn Andujo 0, Griselda Rojas 0, Karyme Rios 0.
+(Rosa Pedre, Gloribel Gonzalez y Monica Sanchez sí tienen etiqueta y teléfono:
+quedaron fuera solo por no llegar a 21 leads.)
+
+PUBLICACIÓN
+Commit 1: "Ranking semana 7 al 13 de septiembre" -> main (55d598e).
+Deploy Vercel dpl_ELYG6soFiSTKwC3DBoaX2u7xWA78 READY, commit 55d598e, posterior al push.
+8 PNG en r/20260914/ (1 general + 7 destinatarias rankeadas).
+
+ENVÍOS (MODO = PRODUCCION) — 9 de 9 con messageId, 0 pendientes
+ Maria Guerrero, Yessika Siller, Luz Zambrano, Nadyma Saif, Karla Bellorin,
+ Mariely Ortega, Yonnelys Rosales  (7 clientas)
+ + resumen a Jesús y resumen a Rossana con la imagen general.
+Los 7 contactos se encontraron en Salon Profits por teléfono; no se creó ninguno.
+
+HISTÓRICO
+21 filas nuevas en Notion para Semana 2026-09-14, en una sola llamada. Nada pendiente.
+
+APÉNDICE A: no se aplicó. El repo ya traía ranking_semanal.py VERSION = 6.
