@@ -1,0 +1,70 @@
+=== Ranking semanal Salon Profits ===
+Corrida: lunes 2026-09-21 (America/New_York). MODO = PRODUCCION
+Semana reportada: 14 al 20 de septiembre (L=2026-09-21, D=2026-09-20)
+Jalon contactos: 2026-09-07T00:00:00Z -> 2026-09-21T12:00:00Z
+Jalon citas: 2026-09-07 -> 2026-11-05 (ventana ancha pedida a la API, recorte local)
+Jalon mensajes (#1): 2026-09-04T00:00:00Z -> 2026-09-21T12:00:00Z
+Script imagenes: VERSION = 6 ya en repo, prueba de humo OK (no hizo falta el parche A)
+Pull main: OK (8564be5)
+
+Activas: 24. Medibles (con EpikFlow Account ID): 21.
+Saltadas (sin EpikFlow Account ID): Heydi Fernandez, Luis Gomez, Vany Gonzalez
+Destinatarias (etiqueta ranking-semanal + telefono): 11
+  karla-bellorin, nadyma-saif, rosa-pedre, gloribel-gonzalez, mariely-ortega,
+  monica-sanchez, yessika-siller, luz-zambrano, yonnelys-rosales,
+  maria-guerrero, griselda-rojas
+Medidas sin imagen ni WhatsApp (sin etiqueta): Karla Flores, Veronica Fuentes,
+  Reyna Castaneda, Gabriela Hidalgo, Elsa Noemi Ron, Cinthya Rivero,
+  Diana Lizcano, Joslyn Andujo, Karyme Rios, Andrea Martinez Canelon
+Record historico (Ventana 7, rankeable): 55% Gloribel Gonzalez (31 de agosto al 6 de septiembre)
+Historico: no hay filas de la semana 2026-09-21 -> primera corrida, nadie marcado "ya enviado"
+
+=== RESULTADO ===
+Ventana usada: 7 dias (12 rankeables >= MIN_RANKEABLES_7D=6). Ranking NO suspendido.
+Record en cabecera: 55% Gloribel Gonzalez (31 de agosto al 6 de septiembre)
+
+Ranking (puesto / clienta / agendaron / leads / tasa / zona / WhatsApp):
+ 1 Yessika Siller            17/37  46%  verde(copa)   enviado
+ 2 Luz Zambrano              12/35  34%  verde(corona) enviado
+ 3 Gabriela Hidalgo           9/28  32%  verde(medalla) sin etiqueta
+ 4 Karla Flores              11/38  29%  verde          sin etiqueta
+ 5 Veronica Fuentes           7/26  27%  verde          sin etiqueta
+ 6 Nadyma Saif                6/23  26%  verde          enviado
+ 7 Yonnelys Rosales           9/39  23%  rojo           enviado
+ 8 Monica Sanchez             7/31  23%  rojo           enviado
+ 9 Karla Bellorin            20/109 18%  rojo           enviado
+10 Mariely Ortega             4/35  11%  rojo           enviado
+11 Andrea Martinez Canelon    1/36   3%  rojo           sin etiqueta
+12 Karyme Rios                0/58   0%  rojo           sin etiqueta
+
+Fuera por minimo (21 leads): Reyna Castaneda 18, Rosa Pedre 15, Gloribel Gonzalez 18,
+  Elsa Noemi Ron 0, Maria Guerrero 17, Cinthya Rivero 1, Diana Lizcano 5,
+  Joslyn Andujo 2, Griselda Rojas 4
+Nota: Rosa Pedre, Gloribel Gonzalez, Maria Guerrero y Griselda Rojas son destinatarias
+  pero quedaron fuera por minimo, asi que no recibieron WhatsApp.
+
+WhatsApps: 7 enviados (todos con messageId), 0 pendientes.
+Resumenes a Jesus y Rossana: los dos enviados con messageId.
+Deploy Vercel: READY (dpl_GK9RtZXhz6YTpZriToSt7VshCt8W), posterior al push. Confirmado por el conector.
+Historico Notion: 21 filas creadas en una sola llamada. Ninguna fila previa de esta semana.
+
+Control de completitud (3.4): 21 de 21 medibles con resumen.json. Ninguna sin medir.
+
+Contraste con el historico de la semana anterior (7 al 13 sep):
+  Leads coinciden en 19 de 21. Diferencias:
+   - Karla Bellorin: historico 106 leads / 14 agendaron; medido ahora 103 / 7.
+   - Agendaron ligeramente mas bajo en Nadyma (8 vs 9), Veronica (2 vs 4),
+     Karla Flores (3 vs 4), Reyna (1 vs 2), Maria Guerrero (9 vs 11).
+  Causa probable: la ventana de citas de esta corrida arranca el 2026-09-07 y la
+  corrida anterior arrancaba el 2026-08-31, mas calendarios/userIds distintos.
+  Se publica con lo medido hoy; no afecta a la semana reportada (14-20 sep).
+
+Incidencias de datos:
+ - Andrea Martinez Canelon: su subcuenta recibio una importacion CSV masiva
+   (~330 contactos sellados 2026-09-14T13:53-13:55, atribucion "CRM UI / csv_import",
+   sin tags de anuncio). NO cuentan como leads de anuncio, asi que no alteran su tasa.
+   Sus contactos de anuncio si estan completos para la semana reportada.
+ - Karyme Rios: 58 leads de anuncio y 0 agendados en la semana. Vale revisar su bot.
+ - Elsa Noemi Ron: 0 leads de anuncio en 14 dias; no se le pidieron citas.
+
+Apendice A: no hizo falta. El repo ya trae ranking_semanal.py VERSION = 6.
