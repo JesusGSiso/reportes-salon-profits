@@ -1,0 +1,60 @@
+=== Ranking semanal Salon Profits — corrida 2026-09-28 ===
+MODO = PRODUCCION
+Semana reportada: lunes 2026-09-21 a domingo 2026-09-27 (America/New_York)
+Etiqueta: "21 al 27 de septiembre"   |  L=2026-09-28  D=2026-09-27  LUNES=20260928
+Jalon contactos: 2026-09-14T00:00:00Z -> 2026-09-28T12:00:00Z
+Jalon citas: 2026-09-14 -> 2026-11-12 (recorte local, startTime ms)
+Jalon mensajes (#1): 2026-09-11T00:00:00Z -> 2026-09-28T12:00:00Z
+Etiqueta 14d si aplica: "14 al 27 de septiembre"
+
+Notion OK: 24 activas, 23 medibles, 12 destinatarias.
+Saltada (sin EpikFlow Account ID): Luis Gomez
+Rankeadas sin WhatsApp posible (sin etiqueta ranking-semanal): Karla Flores, Veronica Fuentes,
+  Reyna Castaneda, Gabriela Hidalgo, Elsa Noemi Ron, Cinthya Rivero, Heydi Fernandez,
+  Diana Lizcano, Joslyn Andujo, Andrea Martinez Canelon, Vany Gonzalez
+Sin telefono: (ninguna con etiqueta carece de telefono)
+Destinatarias (12): karla-bellorin, nadyma-saif, rosa-pedre, gloribel-gonzalez, mariely-ortega,
+  monica-sanchez, yessika-siller, luz-zambrano, yonnelys-rosales, maria-guerrero,
+  griselda-rojas, karyme-rios
+Record historico (Rankeable=YES, Ventana=7): 55% Gloribel Gonzalez, 31 de agosto al 6 de septiembre
+Ya enviado esta semana (2026-09-28): ninguna fila en el historico -> nada que saltar.
+
+ERROR GHL: Cinthya Rivero (FdQnsRC1WIorTem48Fk4) -> 403 LOCATION_NOT_AUTHORIZED
+  "This location is not part of this connection's installation." (se reintenta una vez, §3.4)
+
+=== MEDICION (ventana 7 dias, 21 al 27 de septiembre) ===
+23 medibles; 22 con resumen.json. SIN MEDIR: Cinthya Rivero (403 LOCATION_NOT_AUTHORIZED,
+  reintentado una vez; sigue fuera de la instalacion del conector).
+Historico: no habia filas de la semana 2026-09-28 -> nada que contrastar ni que saltar.
+Rankeables con 7 dias: 10 (>= MIN_RANKEABLES_7D=6) -> NO se ensancha a 14 dias.
+
+RANKING
+ 1 Maria Guerrero            10/25  40%  verde  copa
+ 2 Monica Sanchez             9/24  38%  verde  corona
+ 3 Gabriela Hidalgo           9/25  36%  verde  medalla   (sin etiqueta: no recibe)
+ 4 Yessika Siller            11/33  33%  verde
+ 5 Luz Zambrano               8/26  31%  verde
+ 6 Karla Bellorin            21/87  24%  rojo
+ 7 Karyme Rios               15/83  18%  rojo
+ 8 Karla Flores               3/22  14%  rojo   (sin etiqueta: no recibe)
+ 9 Yonnelys Rosales           3/23  13%  rojo
+10 Andrea Martinez Canelon    3/25  12%  rojo   (sin etiqueta: no recibe)
+
+Fuera por minimo (21 leads): Veronica Fuentes 19, Reyna Castaneda 18, Nadyma Saif 3,
+  Rosa Pedre 18, Gloribel Gonzalez 14, Mariely Ortega 19, Elsa Noemi Ron 0,
+  Heydi Fernandez 0, Diana Lizcano 0, Joslyn Andujo 2, Griselda Rojas 15, Vany Gonzalez 0.
+Nota: Nadyma Saif cayo de 23 leads (semana previa) a 3; Karyme Rios paso de 0/58 a 15/83.
+
+#1 Maria Guerrero: 3952 mensajes exportados (4 paginas, total 3952 -> completo).
+  gestionados_antes_de_agendar = 11, con_nota_de_voz = 10.
+
+=== PUBLICACION Y ENVIOS ===
+Commit publicacion: cbc875b. Deploy Vercel READY sobre ese commit (confirmado por list_deployments).
+WhatsApps a clientas (MODO PRODUCCION), 7 enviados, 0 pendientes, todos con messageId:
+  Maria Guerrero, Monica Sanchez, Yessika Siller, Luz Zambrano, Karla Bellorin,
+  Karyme Rios, Yonnelys Rosales.
+  Nota: el contacto de Salon Profits de Yessika Siller NO aparecio por telefono; se encontro
+  por email. Su telefono en la ficha de SP difiere del de Notion en un digito y la ficha
+  lleva la etiqueta "invalid whatsapp number". Conviene revisar cual es el bueno.
+Resumenes: enviados a Jesus y a Rossana con la imagen general (messageId en ambos).
+Historico Notion: 23 filas creadas de una sola llamada (22 medidas + Cinthya como "sin medir").
