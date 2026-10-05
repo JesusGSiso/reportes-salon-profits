@@ -1,0 +1,82 @@
+RANKING SEMANAL DE AGENDAMIENTO — SALON PROFITS
+Corrida: lunes 2026-10-05 13:24 UTC (9:24 a.m. America/New_York). MODO = PRODUCCION
+Semana reportada: 28 de septiembre al 4 de octubre de 2026 (lunes a domingo)
+Ventana usada: 7 dias (14 rankeables >= MIN_RANKEABLES_7D=6, no hizo falta ensanchar)
+Script de imagenes: ranking_semanal.py VERSION = 6 ya en el repo. Prueba de humo: "script ok".
+  -> El apendice A de la rutina NO se aplico: ya estaba parcheado.
+
+PRE-VUELO
+  Activas en Notion: 26
+  Medibles (con EpikFlow Account ID): 24
+  Saltadas (sin EpikFlow Account ID, no se miden): Luis Gomez, Karla Sermeno
+  Destinatarias (etiqueta ranking-semanal + telefono): 13
+  Record historico en cabecera: 55% Gloribel Gonzalez (31 de agosto al 6 de septiembre)
+  Historico Notion: sin filas previas de la semana 2026-10-05 -> nada marcado "ya enviado"
+
+RANKING (ventana 7 dias, LINEA 25%, BUENO 40%, MIN_LEADS 21)
+  #   Clienta                    Leads  Agend   Tasa  Zona   WhatsApp
+   1  Karla Flores                  21     10    48%  verde  sin etiqueta
+   2  Gloribel Gonzalez             63     26    41%  verde  enviado
+   3  Luz Zambrano                  27     11    41%  verde  enviado
+   4  Monica Sanchez                23      9    39%  verde  enviado
+   5  Yessika Siller                27     10    37%  verde  enviado
+   6  Elsa Noemi Ron                63     21    33%  verde  sin etiqueta
+   7  Vany Gonzalez                 91     28    31%  verde  sin etiqueta
+   8  Maria Guerrero                23      7    30%  verde  enviado
+   9  Gabriela Hidalgo              40     10    25%  verde  sin etiqueta
+  10  Javier Melendez               29      6    21%  rojo   enviado
+  11  Karla Bellorin                84     13    15%  rojo   enviado
+  12  Veronica Fuentes              24      3    12%  rojo   sin etiqueta
+  13  Andrea Martinez Canelon       37      3     8%  rojo   sin etiqueta
+  14  Mariely Ortega                44      1     2%  rojo   enviado
+
+  Premios: copa #1 Karla Flores, corona #2 Gloribel Gonzalez, medalla #3 Luz Zambrano
+  (los tres en verde)
+
+FUERA POR MINIMO (menos de 21 leads de anuncio): Rosa Pedre 20, Reyna Castaneda 15,
+  Diana Lizcano 9, Cinthya Rivero 7, Yonnelys Rosales 5, Nadyma Saif 4,
+  Joslyn Andujo 4, Heydi Fernandez 0, Griselda Rojas 0
+
+SIN MEDIR
+  Karyme Rios — GHL devolvio 403 LOCATION_NOT_AUTHORIZED
+  ("Location was recently rejected for this connection"). Reintentada una vez, de a una,
+  segun §3.4: sigue fallando. Su subcuenta parece haber salido de la instalacion del conector.
+  >>> EL RANKING DE ESTA SEMANA ESTA INCOMPLETO: 23 de 24 medibles.
+      Karyme fue rankeable la semana pasada (83 leads, 18%), asi que su ausencia
+      puede mover los puestos. Hay que reautorizar la subcuenta en GHL.
+
+ENVIOS
+  WhatsApps a clientas: 8 enviados, 0 pendientes (todos con messageId real)
+  Resumen a Jesus: enviado   |  Resumen a Rossana: enviado
+  Deploy de Vercel verificado READY sobre el commit a40817f antes de enviar.
+
+LA #1 (Karla Flores)
+  Gestionados antes de agendar: 15 de 21 leads (71%). Con nota de voz: 6 (29%).
+  Nota de metodo: el export de mensajes de su subcuenta trae 6.104 mensajes en la ventana
+  y la rutina topa en 4 paginas de 1.000. En orden ascendente las 4 paginas solo llegaban
+  al 23 de septiembre, sin tocar la semana medida. Se pidio en orden DESCENDENTE
+  (3 paginas, cobertura desde 2026-09-27) para que la medicion cayera dentro de la semana.
+  Leads y agendaron no cambian con los mensajes: siguen 21 y 10.
+
+NOTAS DE MEDICION
+  - Los calendarios personales del equipo interno de EpikFlow (Josimar Valentina,
+    Juha Vallenilla, Luis gomez, Kevin Cortes) se consultaron y devolvieron 0 eventos
+    en todas las subcuentas probadas (5 de 5 mas Kevin). Al confirmarse vacios se dejaron
+    de consultar en el resto; no son calendarios donde se agende a un lead de la clienta.
+  - Citas recortadas localmente a startTime dentro de 2026-09-21..2026-11-19 (L-14d a L+45d),
+    segun §1. Contactos recortados a 2026-09-21..2026-10-05T12:00Z.
+  - Heydi Fernandez: su subcuenta solo tiene 5 contactos de ejemplo "(Example)" del 17 sep,
+    fuera de la ventana. 0 leads reales.
+  - Vany Gonzalez y Elsa Noemi Ron entran por primera vez con volumen alto
+    (91 y 63 leads) y semana anterior en 0: cuentas que acaban de arrancar.
+
+AVISO PARA REVISAR (no bloquea)
+  Yessika Siller: no aparece por telefono en Salon Profits. El telefono de Notion
+  termina en 764-0075 y el del contacto en Salon Profits termina en 761-0075.
+  Se la encontro por email y el envio salio con messageId, pero su contacto lleva
+  la etiqueta "invalid whatsapp number": conviene confirmar cual de los dos numeros
+  es el bueno y corregir Notion.
+
+HISTORICO NOTION
+  24 filas creadas para la semana 2026-10-05 en una sola llamada (23 medidas + Karyme
+  con Nota "sin medir"). Las 2 saltadas sin EpikFlow Account ID no llevan fila.
