@@ -1,0 +1,67 @@
+RUTINA RANKING SEMANAL — Salon Profits
+MODO = PRODUCCION
+Corrida: lunes 2026-10-12 (L), semana reportada 5 al 11 de octubre (D = 2026-10-11)
+Contactos: 2026-09-28T00:00:00Z a 2026-10-12T12:00:00Z | Citas: 2026-09-28 a 2026-11-26
+VERSION ranking_semanal.py = 6 (sin parche; apéndice A no aplicado)
+Histórico: sin filas para semana 2026-10-12 -> ningún 'ya enviado'
+Récord: 55%% (Gloribel Gonzalez, 31 de agosto al 6 de septiembre)
+
+PRE-VUELO
+Se miden (25): Karla Bellorin, Karla Flores, Verónica Fuentes, Reyna Castañeda, Gabriela Hidalgo, Nadyma Saif, Javier Melendez, Rosa Pedre, Gloribel Gonzalez, Mariely Ortega, Monica Sanchez, Yessika Siller, Luz Zambrano, Yonnelys Rosales, Elsa Noemi Ron, Maria Guerrero, Cinthya Rivero, Heydi Fernandez, Diana Lizcano, Joslyn Andujo, Griselda Rojas, Karyme Rios, Andrea Martinez Canelon, Vany Gonzalez, Karla Sermeno
+
+Destinatarias (etiqueta + teléfono) (13): karla-bellorin, nadyma-saif, javier-melendez, rosa-pedre, gloribel-gonzalez, mariely-ortega, monica-sanchez, yessika-siller, luz-zambrano, yonnelys-rosales, maria-guerrero, griselda-rojas, karyme-rios
+
+Rankeadas sin WhatsApp: Karla Flores (sin etiqueta), Verónica Fuentes (sin etiqueta), Reyna Castañeda (sin etiqueta), Gabriela Hidalgo (sin etiqueta), Elsa Noemi Ron (sin etiqueta), Cinthya Rivero (sin etiqueta), Heydi Fernandez (sin etiqueta), Diana Lizcano (sin etiqueta), Joslyn Andujo (sin etiqueta), Andrea Martinez Canelon (sin etiqueta), Vany Gonzalez (sin etiqueta), Karla Sermeno (sin etiqueta)
+
+Saltadas (sin EpikFlow Account ID) (5): Luis Gomez, Eliane Viana, Catalina Conde Florez, Yadix Hernandez, Mery Guillen
+
+
+=== MEDICIÓN (ventana 7 días, 5 al 11 de octubre) ===
+clienta                     leads agend  tasa  ant   zona
+Gloribel Gonzalez             76    20   26%   41%   verde  #1
+Vany Gonzalez                 66    17   26%   31%   verde  #2
+Mariely Ortega                23     6   26%    2%   verde  #3
+Karyme Rios                   71    17   24%   34%   rojo   #4
+Gabriela Hidalgo              46    11   24%   25%   rojo   #5
+Elsa Noemi Ron                58    13   22%   33%   rojo   #6
+Karla Bellorin                96    19   20%    6%   rojo   #7
+Karla Flores                  22     4   18%   43%   rojo   #8
+Luz Zambrano                  25     3   12%   41%   rojo   #9
+Javier Melendez               26     2    8%   21%   rojo   #10
+
+Fuera por mínimo (21 leads): Verónica Fuentes 20/3, Andrea Martinez Canelon 20/0,
+Reyna Castañeda 17/3, Cinthya Rivero 16/1, Monica Sanchez 13/3, Diana Lizcano 12/0,
+Maria Guerrero 5/0, Griselda Rojas 4/0, Rosa Pedre 3/0, Nadyma Saif 1/0,
+Joslyn Andujo 1/1, Yonnelys Rosales 0/0, Heydi Fernandez 0/0, Karla Sermeno 0/0
+
+Rankeables: 10 (>= MIN_RANKEABLES_7D = 6) -> ventana de 7 días, sin fallback a 14.
+Copa: Gloribel Gonzalez (verde, 26%). Corona: Vany Gonzalez. Medalla: Mariely Ortega.
+
+=== LA #1 (Gloribel Gonzalez) ===
+4 páginas de export-messages-by-location (4000 de 4348 mensajes; tope de 4 páginas
+de la rutina). gestionados_antes_de_agendar = 33, con_nota_de_voz = 31. Son PISO.
+
+=== INCIDENCIAS ===
+- Yessika Siller: GHL devuelve 403 LOCATION_NOT_AUTHORIZED para M93Ti4hkqIEByM9EVKOy
+  en contactos. Reintentado una vez (§3.4), mismo error. NO MEDIDA: no aparece en el
+  ranking aunque es destinataria habitual. El ranking está incompleto por esa clienta.
+- Vercel: al momento de enviar, el deploy del commit de publicación todavía no había
+  sido creado (último deploy de producción era de un commit anterior, de93ee32).
+  Se esperaron 90 s + 60 s (el único reintento que permite la rutina) y se envió igual.
+  Cada mensaje lleva además el link directo a la imagen.
+- Contactos: se usó ventana ancha (desde 2026-07-01) y recorte local a >= 2026-09-28
+  para forzar el guardado a archivo; resultado idéntico al de la ventana estrecha.
+
+=== ENVÍOS (MODO PRODUCCION) ===
+Gloribel Gonzalez  messageId EUc8zjmGLA9tAQsEI7VN
+Mariely Ortega     messageId juJBEfDiBPNOGCIVQJay
+Karyme Rios        messageId VrrRtugA9c7lG35CCI3Q
+Karla Bellorin     messageId IWOZZsvVLUCuo1Rmo379
+Luz Zambrano       messageId l2VuH7Iva3QlPENush4g
+Javier Melendez    messageId sfY2qudp3bHXR34cBxv6
+Resumen Jesús      messageId GLbDXCtlUo1l6B20UtlO
+Resumen Rossana    messageId 2jRK66cZhWybCYCZLYBg
+Total: 6 a clientas + 2 resúmenes. Pendientes: 0.
+
+=== NOTION ===
+24 filas creadas en el histórico para la semana 2026-10-12 (una llamada por lote).
