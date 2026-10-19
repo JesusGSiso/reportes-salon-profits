@@ -1,0 +1,120 @@
+=== Ranking semanal de agendamiento — Salon Profits ===
+Corrida: lunes 2026-10-19 (America/New_York), disparo 13:08 UTC
+MODO = PRODUCCION
+Semana reportada: 12 al 18 de octubre  (L=2026-10-19, D=2026-10-18)
+Ventanas: contactos 2026-10-05T00:00:00Z -> 2026-10-19T12:00:00Z
+          citas 2026-10-05 -> 2026-12-03 (pedido ancho 2025-01-01..2028, recorte local)
+          mensajes (#1) 2026-10-02T00:00:00Z -> 2026-10-19T12:00:00Z
+Script imagenes: VERSION = 6 (ya en el repo, no hizo falta el parche del apendice A)
+Prueba de humo: script ok
+Pull de main: Already up to date.
+Notion: 32 Activas leidas; historico leido (record y semana actual)
+Record (ventana 7, rankeable): 55% Gloribel Gonzalez, 31 de agosto al 6 de septiembre
+Filas del historico con Semana=2026-10-19: ninguna -> nada enviado todavia esta semana
+Semana anterior en historico: 2026-10-12 (24 filas) -> se usara para contrastar
+
+-- Se miden (28) --
+  karla-bellorin             ZuuZM63sPz90iKfc9wvM  etiqueta=si  tel=si  nota=-
+  karla-flores               AbLfdjBPOiTPxxNiqIpS  etiqueta=no  tel=si  nota=sin etiqueta
+  veronica-fuentes           tLV8n8iKRfppOZRb2z8B  etiqueta=no  tel=no  nota=sin etiqueta
+  reyna-castaneda            v7YWmcAr0ZY7Z4bWDFir  etiqueta=no  tel=si  nota=sin etiqueta
+  gabriela-hidalgo           zbDwao54vAh8uCBVIiqW  etiqueta=no  tel=si  nota=sin etiqueta
+  nadyma-saif                ILRZFoPXlMhiwqDBtcYa  etiqueta=no  tel=si  nota=sin etiqueta
+  javier-melendez            pH1iPsykTltl02GofF9J  etiqueta=no  tel=si  nota=sin etiqueta
+  rosa-pedre                 78ZbrC0ORSr26exRs1oO  etiqueta=no  tel=si  nota=sin etiqueta
+  gloribel-gonzalez          Ee1hPAmQJXHO20f7hJp3  etiqueta=no  tel=si  nota=sin etiqueta
+  mariely-ortega             zje8PfQCkFptCr5fkGsg  etiqueta=si  tel=si  nota=-
+  monica-sanchez             eH0YUzUCJw989dc2uH5P  etiqueta=no  tel=si  nota=sin etiqueta
+  yessika-siller             M93Ti4hkqIEByM9EVKOy  etiqueta=no  tel=si  nota=sin etiqueta
+  luz-zambrano               7WvAO3BL2teqmezlyNid  etiqueta=si  tel=si  nota=-
+  yonnelys-rosales           xzyBSl9piwIJFqjqlWb4  etiqueta=no  tel=si  nota=sin etiqueta
+  elsa-noemi-ron             2mY1AFT01uQdj7sjNos2  etiqueta=no  tel=si  nota=sin etiqueta
+  maria-guerrero             HOjXqCpcXHH6D9Zan7OG  etiqueta=si  tel=si  nota=-
+  cinthya-rivero             FdQnsRC1WIorTem48Fk4  etiqueta=no  tel=si  nota=sin etiqueta
+  heydi-fernandez            2Jc0Cwc74uFPkuAeXoGy  etiqueta=no  tel=si  nota=sin etiqueta
+  diana-lizcano              ZOO2ftDo7lLIj06TOtqB  etiqueta=no  tel=si  nota=sin etiqueta
+  joslyn-andujo              zNy7bMbElHZWKZvzduvg  etiqueta=no  tel=si  nota=sin etiqueta
+  griselda-rojas             0nIuJ2xpLUnHVp4PfKQA  etiqueta=no  tel=si  nota=sin etiqueta
+  karyme-rios                N7PxK6j9CTxvjSTmP3iM  etiqueta=si  tel=si  nota=-
+  andrea-martinez-canelon    RqAKZDegZH6HlLyr4zFv  etiqueta=no  tel=si  nota=sin etiqueta
+  vany-gonzalez              nHYA4yfwKaT3jcZMiLRi  etiqueta=si  tel=si  nota=-
+  karla-sermeno              OYRVgBWduSb9GHpykSSb  etiqueta=no  tel=si  nota=sin etiqueta
+  eliane-viana               DNnseg1l7X4uCBBwLsav  etiqueta=no  tel=si  nota=sin etiqueta
+  catalina-conde-florez      0wVxo0lRbBgDoNHrumaG  etiqueta=no  tel=si  nota=sin etiqueta
+  yadix-hernandez            H6EVbBcmPb3TUvP1qBeM  etiqueta=no  tel=si  nota=sin etiqueta
+
+-- Saltadas (4) --
+  Luis Gomez: sin EpikFlow Account ID
+  Mery Guillen: sin EpikFlow Account ID
+  Samanta Berroa: sin EpikFlow Account ID
+  María Virginia Gallardo: sin EpikFlow Account ID
+
+-- Destinatarias (6) --
+  karla-bellorin, mariely-ortega, luz-zambrano, maria-guerrero, karyme-rios, vany-gonzalez
+
+-- Medicion --
+
+-- Ventana usada: 7 dias (10 rankeables >= MIN_RANKEABLES_7D=6) --
+Etiqueta: 12 al 18 de octubre
+Record en cabecera: 55% Gloribel Gonzalez (31 de agosto al 6 de septiembre)
+
+-- Ranking (puesto, clienta, leads, agendaron, tasa, zona, WhatsApp) --
+ 1  Gabriela Hidalgo         31  14  45%  verde (copa)   sin etiqueta
+ 2  Luz Zambrano             29  12  41%  verde (medalla) ENVIADO
+ 3  Karyme Rios              64  14  22%  rojo           ENVIADO
+ 4  Javier Melendez          45   9  20%  rojo           sin etiqueta
+ 5  Karla Flores             21   4  19%  rojo           sin etiqueta
+ 6  Karla Bellorin           79  13  16%  rojo           ENVIADO
+ 7  Elsa Noemi Ron           37   6  16%  rojo           sin etiqueta
+ 8  Monica Sanchez           32   5  16%  rojo           sin etiqueta
+ 9  Gloribel Gonzalez        59   9  15%  rojo           sin etiqueta
+10  Andrea Martinez Canelon  26   3  12%  rojo           sin etiqueta
+
+-- Fuera por minimo (21 leads) --
+Reyna Castaneda 20, Veronica Fuentes 19, Mariely Ortega 19 (destinataria), Vany Gonzalez 17 (destinataria),
+Joslyn Andujo 17, Cinthya Rivero 15, Griselda Rojas 14, Diana Lizcano 9, Nadyma Saif 8, Karla Sermeno 6,
+Eliane Viana 2, Rosa Pedre 0, Yonnelys Rosales 0, Maria Guerrero 0 (destinataria), Catalina Conde Florez 0,
+Yadix Hernandez 0
+
+-- La #1 (Gabriela Hidalgo) --
+Mensajes exportados: 1821 (2 paginas, cursor sin caducar)
+gestionados_antes_de_agendar = 10 de 31 (32%) | con_nota_de_voz = 9 de 31 (29%)
+
+-- Sin medir (control de completitud §3.4) --
+Yessika Siller (M93Ti4hkqIEByM9EVKOy) y Heydi Fernandez (2Jc0Cwc74uFPkuAeXoGy):
+GHL devuelve 403 LOCATION_NOT_AUTHORIZED ("This location is not part of this connection's installation").
+Reintentado una vez de a una, mismo error. El ranking de esta semana esta INCOMPLETO por estas dos.
+
+-- Contraste con el historico (Semana 2026-10-12 = Oct 5-11, mi semana_anterior) --
+Los leads coinciden en las 24 clientas comparables. Diferencias solo en agendaron:
+  gloribel-gonzalez   historico 76/20  vs  medido 76/19
+  karla-bellorin      historico 96/19  vs  medido 86/5
+  veronica-fuentes    historico 20/3   vs  medido 20/0
+  reyna-castaneda     historico 17/3   vs  medido 17/2
+Publico lo medido hoy: son numeros de la semana ANTERIOR, solo afectan tasa_ant (la flecha de
+comparacion), no el ranking de esta semana, que se calcula con datos frescos de Oct 12-18.
+La causa probable son citas reprogramadas/borradas y contactos eliminados desde la corrida pasada.
+Vany Gonzalez tenia una pagina de contactos sin traer (100 de 145); se corrigio y quedo igual al
+historico (66/17), lo que confirma que el resto de los conteos esta completo.
+
+-- Envios (MODO = PRODUCCION) --
+Luz Zambrano    messageId mIli203YMhtcLzBNN1Kl
+Karyme Rios     messageId b3CgzMEOu5yt5xKQYBFB
+Karla Bellorin  messageId jnnxvL2VY6BhYI0xhKRx
+Resumen Jesus   messageId yYFub3rstqVU1SpiDOGB
+Resumen Rossana messageId uKZfVE0Hgpi80n40hu5b
+WhatsApps: 3 a clientas + 2 resumenes = 5 enviados, 0 pendientes
+
+-- Publicacion --
+Commit 1: 082e68c "Ranking semana 12 al 18 de octubre" -> push a main OK
+Deploy Vercel dpl_DSRRefbsQFsAZ4W2hSw5i85ckapg READY, target production, commit 082e68c,
+created 1792417006 > push_ts 1792417003 -> confirmado antes de enviar
+
+-- Notion --
+28 filas creadas en una sola llamada para Semana 2026-10-19 (26 medidas + 2 sin medir).
+No habia filas previas de esta semana: nada que actualizar, nada reenviado.
+
+-- Nota tecnica de la corrida --
+pillow no estaba instalado para el python activo (3.11); `pip` apuntaba a 3.13.
+Se instalo con `python3 -m pip install pillow`. Vale dejarlo escrito en la rutina.
+ranking_semanal.py ya venia en VERSION = 6: no hizo falta el parche del apendice A.
