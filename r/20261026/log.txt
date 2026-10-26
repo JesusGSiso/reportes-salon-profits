@@ -1,0 +1,53 @@
+== MODO = PRODUCCION ==
+Ventana: semana 2026-10-19 a 2026-10-25 (lunes corrida 2026-10-26). Etiqueta "19 al 25 de octubre".
+Record historico: Gloribel Gonzalez 55% (31 de agosto al 6 de septiembre), ventana 7. No autorreferencial.
+Historico: sin filas para semana 2026-10-26 -> primera corrida de la semana, nada "ya enviado".
+Nota de medicion: en las clientas cuya respuesta de GHL llego inline (yonnelys-rosales,
+maria-guerrero, joslyn-andujo) los contactos se transcribieron conservando id, dateAdded y
+los tags de anuncio. Ninguno de los contactos sin tag de anuncio tenia adId ni sessionSource
+"paid", asi que la clasificacion de lead de anuncio es identica a la de la fuente.
+Nota de citas: cuando la respuesta de get-calendar-events llego inline (no a archivo) se
+guardaron las citas creadas desde 2026-10-12. gestion_semanal.py cuenta una cita solo si su
+dateAdded cae dentro de la semana medida, asi que las anteriores no alteran ningun numero.
+
+=== RESULTADO ===
+Ventana usada: 7 dias (16 rankeables >= 6, no hizo falta ensanchar).
+Deploy Vercel: dpl_6HNQiqzQW2nRk1gASGTvF1F5eK9z READY, commit ed203ad, created > push_ts.
+
+Ranking (puesto, clienta, leads/agendaron, tasa, zona, whatsapp):
+ 1 Luz Zambrano            29/10  34% verde  ENVIADO
+ 2 Vany Gonzalez           25/8   32% verde  ENVIADO
+ 3 Gabriela Hidalgo        40/10  25% verde  sin etiqueta
+ 4 Andrea Martinez Canelon 25/5   20% rojo   sin etiqueta
+ 5 Karyme Rios             58/11  19% rojo   ENVIADO
+ 6 Javier Melendez         36/7   19% rojo   sin etiqueta
+ 7 Reyna Castaneda         32/6   19% rojo   sin etiqueta
+ 8 Mariely Ortega          27/5   19% rojo   ENVIADO
+ 9 Nadyma Saif             21/4   19% rojo   sin etiqueta
+10 Veronica Fuentes        22/4   18% rojo   sin etiqueta
+11 Karla Bellorin          91/15  16% rojo   ENVIADO
+12 Diana Lizcano           29/3   10% rojo   sin etiqueta
+13 Cinthya Rivero          21/2   10% rojo   sin etiqueta
+14 Gloribel Gonzalez       65/2    3% rojo   sin etiqueta
+15 Samanta Berroa          46/0    0% rojo   sin etiqueta
+16 Catalina Conde Florez   38/0    0% rojo   sin etiqueta
+
+Fuera por minimo (21 leads): Elsa Noemi Ron 18, Karla Flores 17, Yadix Hernandez 13,
+Karla Sermeno 10, Maria Guerrero 9, Griselda Rojas 8, y 8 mas con 0 leads.
+Maria Guerrero tiene etiqueta ranking-semanal pero no alcanzo el minimo: no recibio.
+
+Saltadas (sin EpikFlow Account ID): Luis Gomez, Maria Matheus Garcia, Herlinda Gutierrez.
+
+INCIDENCIA - ranking incompleto: Monica Sanchez, Yessika Siller y Heydi Fernandez no se
+pudieron medir. GHL respondio 403 LOCATION_NOT_AUTHORIZED en los dos intentos, aunque las
+tres aparecen como sub-cuentas instaladas en list_locations. Quedan en el historico con
+Nota "sin medir".
+
+INCIDENCIA - contacto: Vany Gonzalez no aparecio en Salon Profits buscando por el telefono
+que tiene en Notion; se encontro por email y su contacto en SP tiene otro numero. Conviene
+alinear el numero en Notion (el detalle fue al resumen de WhatsApp, no se escribe aqui
+porque el repo es publico).
+
+Resumenes a Jesus y a Rossana: enviados, los dos con messageId.
+Historico Notion: 33 filas creadas para la semana 2026-10-26 (30 medidas + 3 sin medir).
+Entorno: Pillow estaba roto en python3.11; los scripts de imagen se corrieron con python3.13.
