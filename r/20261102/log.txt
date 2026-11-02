@@ -1,0 +1,61 @@
+=== RANKING SEMANAL SALON PROFITS ===
+Corrida: lunes 2026-11-02 (America/New_York)  |  MODO = PRODUCCION
+Semana reportada: 26 de octubre al 1 de noviembre (L=2026-11-02, D=2026-11-01)
+LUNES=20261102
+Ventanas: contactos 2026-10-19T00:00:00Z -> 2026-11-02T12:00:00Z ; citas ancha+recorte local ; mensajes 2026-10-16T00:00:00Z -> 2026-11-02T12:00:00Z
+Script imagenes: VERSION=6 ya en repo (sin parche). Prueba de humo: OK.
+Pull origin/main: OK (11b6b39..af7b1fd)
+NOTA ENTORNO: PIL del sistema (python3.11) estaba roto (_imaging ausente); reinstalado pillow 13.0.0 para python3.11.
+NOTA NOTION: el historico ya NO entra en una sola llamada (has_more=true, ~8 semanas).
+  Se usaron dos consultas dirigidas: record (ORDER BY Tasa DESC) y filas de la semana (Semana >= 2026-10-26).
+Record historico (ventana 7, rankeable): Gloribel Gonzalez 55% (31 de agosto al 6 de septiembre). No autorreferencial.
+Filas de esta Semana (2026-11-02) en el historico: NINGUNA -> nada "ya enviado", no hay contraste previo.
+Activas: 37 | Medibles (con EpikFlow Account ID): 34 | Destinatarias (etiqueta+telefono): 6
+Destinatarias: karla-bellorin, mariely-ortega, luz-zambrano, maria-guerrero, karyme-rios, vany-gonzalez
+Saltadas (sin EpikFlow Account ID, no se miden): Luis Gomez, Rosa Gonzalez, Grilys Panza
+
+=== MEDICION ===
+Medibles 34 | con resumen 30 | SIN MEDIR 4 (GHL 403 LOCATION_NOT_AUTHORIZED, reintentado 1 vez cada una, mismo error):
+  Monica Sanchez, Yessika Siller, Yonnelys Rosales, Heydi Fernandez
+  -> El ranking de esta semana esta INCOMPLETO: 30 de 34 Activas medibles.
+  -> Nota: en el historico de la semana pasada (2026-10-26) Monica Sanchez, Yessika Siller y
+     Heydi Fernandez ya tenian Leads=null; el problema no es nuevo y parece una desinstalacion
+     o cambio de la conexion GHL en esas 4 subcuentas. Requiere revision manual de Jesus.
+DESVIACION DE METODO (documentada): para las citas se consulto un userId por cada calendario de
+  staff real de la clienta. Los calendarios personales de staff de la agencia replicados en las
+  subcuentas (Luis gomez PF2mZ9WUF0qjJKi3vf4E, Josimar Valentina Jwsrj67efr0k5VmhujJl,
+  Juha Vallenilla 3JMsUMfYzbMIosoANtl3, Paola Cedeno paRqpLWSJ5lemzxhrAbc, Kevin Cortes
+  wdePSpubVDSt7UOVjDsH) devolvieron 0 eventos en 12 de 12 consultas hechas; se omitieron en el
+  resto para acotar el tiempo de corrida. Verificar de nuevo en la proxima corrida.
+Ventana usada: 7 dias (15 rankeables >= MIN_RANKEABLES_7D=6). No hubo suspension ni ensanche.
+#1 Gabriela Hidalgo: export-messages-by-location devolvio total=0 mensajes en el jalon
+  2026-10-16 -> 2026-11-02T12:00Z. gest_antes y notas_voz quedan en null (texto de respaldo).
+
+=== RANKING PUBLICADO (ventana 7 dias) ===
+  1 Gabriela Hidalgo         30%  9/30    VERDE  copa
+  2 Javier Melendez          27%  17/63   VERDE
+  3 Karyme Rios              23%  13/57   rojo   -> WhatsApp ENVIADO
+  4 Nadyma Saif              22%  5/23    rojo
+  5 Veronica Fuentes         22%  5/23    rojo
+  6 Mariely Ortega           21%  5/24    rojo   -> WhatsApp ENVIADO
+  7 Luz Zambrano             20%  5/25    rojo   -> WhatsApp ENVIADO
+  8 Catalina Conde Florez    19%  17/91   rojo
+  9 Yadix Hernandez          16%  5/32    rojo
+ 10 Karla Bellorin           15%  16/110  rojo   -> WhatsApp ENVIADO
+ 11 Reyna Castaneda          14%  5/37    rojo
+ 12 Vany Gonzalez            12%  5/43    rojo   -> PENDIENTE
+ 13 Gloribel Gonzalez         2%  1/52    rojo
+ 14 Samanta Berroa            0%  0/62    rojo
+ 15 Diana Lizcano             0%  0/28    rojo
+Record en cabecera: 55% (Gloribel Gonzalez, 31 de agosto al 6 de septiembre).
+Solo 2 de 15 cruzaron la linea del 25%. La copa es de Gabriela Hidalgo.
+
+=== ENVIOS (MODO=PRODUCCION) ===
+Deploy Vercel confirmado READY (commit 93b8d69) antes de enviar. Sin esperas extra.
+A clientas: 4 enviados con messageId (karyme-rios, mariely-ortega, luz-zambrano, karla-bellorin).
+PENDIENTE 1: Vany Gonzalez. Tiene etiqueta ranking-semanal y telefono en Notion, su imagen
+  se genero y publico, pero no existe contacto en la subcuenta Salon Profits ni por telefono
+  ni por email. La rutina no crea contactos: hay que crearlo a mano y reenviar.
+Maria Guerrero: es destinataria pero quedo fuera por minimo (8 leads). No recibe por diseno.
+Resumen a Jesus y a Rossana: los dos enviados con messageId, con la imagen general.
+Historico Notion: 34 filas creadas en una sola llamada (30 medidas + 4 sin medir).
