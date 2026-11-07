@@ -598,6 +598,7 @@ td:first-child{font-weight:700}
 .strip h3{font-family:Kalam,cursive;font-size:clamp(18px,1.6vw,22px);margin:4px 0 0;line-height:1.1}
 .strip p{margin:0;font-size:clamp(14.5px,1.2vw,16.5px);line-height:1.35}
 .hint{font-size:14px;color:var(--piedra);margin:.8em 0 0}
+.book{margin:.2em 0 0;font-weight:700;font-size:16px}.book a{color:var(--tinta);text-decoration-thickness:2px;text-underline-offset:3px}.book a:focus-visible{outline:3px solid var(--bronce);outline-offset:2px}
 .ctl{position:fixed;right:14px;bottom:14px;display:flex;gap:6px;align-items:center;z-index:5}
 .ctl button{font:600 14px Archivo,system-ui,sans-serif;background:#fff;color:var(--tinta);border:2px solid var(--tinta);border-radius:999px;padding:6px 12px;cursor:pointer}
 .ctl button:focus-visible{outline:3px solid var(--bronce);outline-offset:2px}
@@ -678,6 +679,7 @@ def slide_html(i, s):
     if s.get("hz"):
         h.append(f'<p class="hz">{esc(s["hz"])}</p>')
     if i == 1:
+        h.append('<p class="book"><a href="La-maquina-de-clientas-de-alto-valor.pdf" download>Descargar el libro en PDF</a></p>')
         h.append('<p class="hint hide-sm">Para presentar: flechas del teclado para avanzar y la tecla F para pantalla completa.</p>')
     h.append('</div></div></section>')
     return "".join(h)
