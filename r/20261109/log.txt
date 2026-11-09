@@ -1,0 +1,78 @@
+RANKING SEMANAL — Salon Profits
+MODO: PRODUCCION
+Corrida: lunes 2026-11-09 (America/New_York). Semana reportada: 2 al 8 de noviembre (L=2026-11-09, D=2026-11-08).
+Ventana contactos: 2026-10-26T00:00Z → 2026-11-09T12:00Z. Citas: ventana ancha 2025-01-01→2028, el script filtra por dateAdded.
+Ventana usada para el ranking: 7 dias (10 rankeables >= MIN_RANKEABLES_7D=6).
+Record en cabecera: 55% Gloribel Gonzalez (31 de agosto al 6 de septiembre), del historico.
+
+PRE-VUELO
+Activas en Notion: 30. Medibles (con EpikFlow Account ID): 25. Saltadas (sin Account ID): 5.
+  Saltadas: Luis Gomez, Grilys Panza, Sylvia Najera, Andrea Garcia, Yudith Bello (sin EpikFlow Account ID).
+Destinatarias (etiqueta ranking-semanal + telefono): karla-bellorin, mariely-ortega, luz-zambrano, karyme-rios, vany-gonzalez.
+Equipo que recibe el resumen (etiqueta ranking-semanal): Jesus Gomez, Rossana Rebonatto, Juha Vallenilla, Chiara Pacheco, Paola Cedeno.
+Historico: no habia filas para la Semana 2026-11-09, asi que no hay nadie en "ya enviado"; todas las filas se crean.
+
+COMPLETITUD (§3.4)
+Medidas con resumen.json: 24 de 25.
+SIN MEDIR: Heydi Fernandez — GHL 403 LOCATION_NOT_AUTHORIZED, tambien en el reintento de a una.
+  (Mismo fallo que la corrida del 2026-11-02, donde fallaron 4 subcuentas por lo mismo.)
+=> EL RANKING ESTA INCOMPLETO: falta Heydi Fernandez. Se dice en el resumen al equipo y en la notificacion.
+
+NOTA DE EFICIENCIA (medido en esta corrida)
+Los userId internos de Salon Profits replicados en las subcuentas devuelven SIEMPRE events: []
+  (PF2mZ9WUF0qjJKi3vf4E Luis Gomez, Jwsrj67efr0k5VmhujJl Josimar, EtY5cookuTn7xBuROKHQ Juha AM,
+   sBR55lp9yqh9Y7nnWBpx Paola AM, wdePSpubVDSt7UOVjDsH, f2OCqBNIR9MwTV7pHXio Chiara AM).
+Se midio: 12 de 12 llamadas a esos userId salieron vacias. Se pueden omitir en corridas futuras.
+Tambien: solo se pidieron calendarios/citas a las clientas con leads>0 en alguna de las dos semanas;
+  las de 0 leads tienen agendaron=0 por definicion. Ahorro: 6 clientas sin get-calendars.
+Pillow del sistema venia roto (falta _imaging); se arreglo con
+  python3.11 -m pip install --break-system-packages --force-reinstall pillow.
+
+RANKING (ventana 7 dias, LINEA=25, BUENO=40)
+   1. Luz Zambrano               9/22  =  41%  zona verde  (sem. anterior: 20%)
+   2. Karyme Rios               19/59  =  32%  zona verde  (sem. anterior: 23%)
+   3. Griselda Rojas            10/39  =  26%  zona verde  (sem. anterior: sin base (<21 leads))
+   4. Catalina Conde Florez     12/48  =  25%  zona verde  (sem. anterior: 18%)
+   5. Nadyma Saif                7/30  =  23%  zona rojo  (sem. anterior: 13%)
+   6. Gabriela Hidalgo           7/36  =  19%  zona rojo  (sem. anterior: 30%)
+   7. Reyna Castañeda            5/27  =  19%  zona rojo  (sem. anterior: 14%)
+   8. Vany Gonzalez              5/31  =  16%  zona rojo  (sem. anterior: 12%)
+   9. Karla Bellorin             9/74  =  12%  zona rojo  (sem. anterior: 5%)
+  10. Samanta Berroa             5/64  =   8%  zona rojo  (sem. anterior: 0%)
+
+FUERA POR MINIMO (<21 leads de anuncio)
+  Karla Flores             19 leads
+  Mariely Ortega           20 leads
+  Cinthya Rivero           11 leads
+  Joslyn Andujo            0 leads
+  Karla Sermeno            8 leads
+  Eliane Viana             0 leads
+  Yadix Hernandez          13 leads
+  Mery Guillen             0 leads
+  María Virginia Gallardo  0 leads
+  Daniela Borges Crosa     16 leads
+  María Matheus García     0 leads
+  Brigida Farrera          0 leads
+  Herlinda Gutierrez       0 leads
+  Rosa González            8 leads
+
+#1 Luz Zambrano: gestionados antes de agendar = 15, con nota de voz = 3
+
+ENVIOS (MODO PRODUCCION) — todos con messageId real
+  Luz Zambrano     puesto 1  enviado  messageId PU7d4BlCaZMBSVhpqiXh
+  Karyme Rios      puesto 2  enviado  messageId qz6B8F9Y850oMRSS2Cde
+  Karla Bellorin   puesto 9  enviado  messageId N1Iloq0PZ14FFCOISxvy
+  Vany Gonzalez    puesto 8  enviado  messageId qWqOXY7V87JTmeqaq0f5
+    (Vany no aparecio por telefono en Salon Profits; se encontro por email y el envio volvio con messageId.
+     Su contacto en SP trae las etiquetas "invalid whatsapp number" y "bounced" y el telefono alli no coincide
+     con el de Notion: conviene revisar cual es el bueno.)
+  Mariely Ortega: tiene etiqueta y telefono pero quedo FUERA POR MINIMO (20 leads), no recibe.
+Resumen al equipo: enviado a Jesus Gomez, Rossana Rebonatto, Juha Vallenilla, Chiara Pacheco, Paola Cedeno (5/5 con messageId).
+Total: 9 WhatsApps enviados, 0 pendientes.
+
+DEPLOY
+Push a main: commit fccab28. Deploy Vercel dpl_Db8c5hWjyFr7ojBBFWRqGWdpMeEy READY,
+created 1794231306 > push_ts 1794231304, sha coincide. Confirmado antes de enviar.
+
+HISTORICO NOTION
+25 filas creadas en una sola llamada (24 medidas + Heydi Fernandez sin medir). No habia filas previas de esta semana.
